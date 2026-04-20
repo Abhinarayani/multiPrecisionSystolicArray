@@ -96,11 +96,14 @@ module bitsys_systolic_array
     // clear_sr[n] = 1 is readable as FF output n+1 posedges after start.
     // PE(i,j) uses clear_sr[i+j]: fires when first product arrives.
     // -----------------------------------------------------------------------
-    logic [2*N:0] clear_sr;   // wide enough for max i+j = 2*(N-1)
+    // Width must cover last accumulation at posedge (i+j+N) for PE(N-1,N-1):
+    // posedge = 3N-2.  MAC samples data_valid from state after posedge 3N-3,
+    // so bit must survive until position 3N-3 → need indices 0..3N-3 (3N-2 bits).
+    logic [3*N-3:0] clear_sr;
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) clear_sr <= '0;
-        else        clear_sr <= {clear_sr[2*N-1:0], start};
+        else        clear_sr <= {clear_sr[3*N-4:0], start};
     end
 
     // -----------------------------------------------------------------------

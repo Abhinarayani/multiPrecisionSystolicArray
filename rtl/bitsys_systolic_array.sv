@@ -84,12 +84,23 @@ module bitsys_systolic_array
     logic [7:0] a_h [0:N-1][0:N];   // col index N = sink (unused)
     logic [7:0] b_v [0:N][0:N-1];   // row index N = sink
 
-    always_comb begin
-        for (int i = 0; i < N; i++)
-            a_h[i][0] = a_skew[i][i];
-        for (int j = 0; j < N; j++)
-            b_v[0][j] = b_skew[j][j];
-    end
+    // always_comb begin
+    //     for (int i = 0; i < N; i++)
+    //         a_h[i][0] = a_skew[i][i];
+    //     for (int j = 0; j < N; j++)
+    //         b_v[0][j] = b_skew[j][j];
+    // end
+
+// --- REPLACE WITH THIS ---
+    generate
+        for (genvar i = 0; i < N; i++) begin : init_a_h
+            assign a_h[i][0] = a_skew[i][i];
+        end
+        for (genvar j = 0; j < N; j++) begin : init_b_v
+            assign b_v[0][j] = b_skew[j][j];
+        end
+    endgenerate
+
 
     // -----------------------------------------------------------------------
     // Clear shift register

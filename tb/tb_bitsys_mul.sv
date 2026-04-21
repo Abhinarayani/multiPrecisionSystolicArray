@@ -2,7 +2,20 @@
 // Testbench for bitsys_mul – exhaustive spot-checks across all precision modes
 
 `timescale 1ns/1ps
-`include "bitsys_pkg.sv"
+package bitsys_pkg;
+
+    // Precision mode encoding (matches paper's 1/2/4/8-bit support)
+    // n_channels = 8 >> prec  (channels active per multiplier)
+    // bits_per_ch = 1 << prec (bits per operand per channel)
+    localparam logic [1:0] PREC_1B = 2'b00; // 8 channels of 1-bit  (BNN / AND)
+    localparam logic [1:0] PREC_2B = 2'b01; // 4 channels of 2-bit
+    localparam logic [1:0] PREC_4B = 2'b10; // 2 channels of 4-bit
+    localparam logic [1:0] PREC_8B = 2'b11; // 1 channel  of 8-bit
+
+    // Systolic array default size
+    localparam int SA_SIZE = 4;
+
+endpackage
 
 module tb_bitsys_mul;
     import bitsys_pkg::*;
@@ -116,6 +129,10 @@ module tb_bitsys_mul;
         check_8b(8'd255,  8'd255,  0);
         check_8b(8'd0,    8'd100,  0);
 
+        check_8b(8'd25,    8'd31,    0);
+        check_8b(8'd0,  8'd0,  0);
+        check_8b(8'd255,  8'd255,  0);
+        check_8b(8'd111,    8'd11,  0);
         // --- 8-bit signed tests ---
         $display("\n-- 8-bit signed --");
         check_8b(-8'sd128,  -8'sd1,   1);   // -128 × -1 = 128

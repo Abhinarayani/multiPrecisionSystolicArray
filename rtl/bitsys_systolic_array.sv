@@ -22,6 +22,13 @@
 //   PE(N-1,N-1) finishes at posedge 3N-2.
 //   output_valid flag rises after posedge 3N-2 (DONE_CYCLE = 3N-2).
 //
+// --- Clock Gating ---
+// Uses integrated clock gating (ICG) cells to reduce dynamic power:
+//   - Skew registers (a_skew, b_skew) gated by data_valid
+//   - Clear shift register gated by (start | data_valid)
+//   - Cycle counter gated by (start | (cycle_cnt != 0))
+//   - Output capture registers gated by (start | (cycle_cnt == DONE_CYCLE))
+//
 // --- Ports ---
 //   a_in[i]     : element of A row i, column-streamed each cycle
 //   b_in[j]     : element of B column j, row-streamed each cycle
@@ -48,6 +55,31 @@ module bitsys_systolic_array
 );
 
     // -----------------------------------------------------------------------
+    // Clock gating signals and cells
+    // -----------------------------------------------------------------------
+    logic clk_skew;      // Gated clock for skew registers
+    logic clk_clear;     // Gated clock for clear shift register
+    logic clk_cnt;       // Gated clock for cycle counter
+    logic clk_out;       // Gated clock for output capture
+    
+    logic skew_en;       // Skew clock gate enable
+    logic clear_en;      // Clear SR clock gate enable
+    logic cnt_en;        // Counter clock gate enable
+    logic out_en;        // Output clock gate enable
+    
+    // -----------------------------------------------------------------------
+    // Output valid and result capture timing parameters
+    // DONE_CYCLE = 3*N - 1.
+    // Last product accumulates at PE(N-1,N-1) on posedge 3N-2.
+    // pe_result is not yet visible to the always_ff at that same posedge,
+    // so we wait one more cycle: at posedge 3N-1, cycle_cnt == 3N-1,
+    // pe_result holds the final values, and output_valid/c_out are latched.
+    // -----------------------------------------------------------------------
+    localparam int DONE_CYCLE = 3*N - 1;
+    localparam int CNT_W      = $clog2(4*N + 4);
+    logic [CNT_W-1:0] cycle_cnt;
+    
+    // -----------------------------------------------------------------------
     // Input skew registers
     // a_skew[i][d]: d-stage pipeline for row i's input
     // b_skew[j][d]: d-stage pipeline for col j's input
@@ -57,7 +89,7 @@ module bitsys_systolic_array
     logic [7:0] a_skew [0:N-1][0:N];   // [row][delay 0..N] (index N unused pad)
     logic [7:0] b_skew [0:N-1][0:N];
 
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk_skew or negedge rst_n) begin
         if (!rst_n) begin
             for (int i = 0; i < N; i++)
                 for (int d = 0; d <= N; d++) begin
@@ -112,7 +144,7 @@ module bitsys_systolic_array
     // so bit must survive until position 3N-3 → need indices 0..3N-3 (3N-2 bits).
     logic [3*N-3:0] clear_sr;
 
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk_clear or negedge rst_n) begin
         if (!rst_n) clear_sr <= '0;
         else        clear_sr <= {clear_sr[3*N-4:0], start};
     end
@@ -122,6 +154,46 @@ module bitsys_systolic_array
     // -----------------------------------------------------------------------
     logic data_valid;
     assign data_valid = |clear_sr;
+
+    // -----------------------------------------------------------------------
+    // Clock gating cell instantiations
+    // -----------------------------------------------------------------------
+    
+    // Skew registers gated by (start | data_valid) to capture input data immediately
+    assign skew_en = start | data_valid;
+    bitsys_clock_gate u_clk_gate_skew (
+        .clk           (clk),
+        .enable        (skew_en),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_skew)
+    );
+    
+    // Clear shift register gated by (start | data_valid)
+    assign clear_en = start | data_valid;
+    bitsys_clock_gate u_clk_gate_clear (
+        .clk           (clk),
+        .enable        (clear_en),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_clear)
+    );
+    
+    // Cycle counter gated by (start | (cycle_cnt != 0))
+    assign cnt_en = start | (cycle_cnt != '0);
+    bitsys_clock_gate u_clk_gate_cnt (
+        .clk           (clk),
+        .enable        (cnt_en),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_cnt)
+    );
+    
+    // Output capture gated by (start | (cycle_cnt == DONE_CYCLE))
+    assign out_en = start | (cycle_cnt == CNT_W'(DONE_CYCLE));
+    bitsys_clock_gate u_clk_gate_out (
+        .clk           (clk),
+        .enable        (out_en),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_out)
+    );
 
     // -----------------------------------------------------------------------
     // PE grid (generate)
@@ -150,26 +222,15 @@ module bitsys_systolic_array
     endgenerate
 
     // -----------------------------------------------------------------------
-    // Output valid and result capture
-    //
-    // DONE_CYCLE = 3*N - 1.
-    // Last product accumulates at PE(N-1,N-1) on posedge 3N-2.
-    // pe_result is not yet visible to the always_ff at that same posedge,
-    // so we wait one more cycle: at posedge 3N-1, cycle_cnt == 3N-1,
-    // pe_result holds the final values, and output_valid/c_out are latched.
+    // Cycle counter uses gated clock
     // -----------------------------------------------------------------------
-    localparam int DONE_CYCLE = 3*N - 1;
-    localparam int CNT_W      = $clog2(4*N + 4);
-
-    logic [CNT_W-1:0] cycle_cnt;
-
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk_cnt or negedge rst_n) begin
         if (!rst_n)   cycle_cnt <= '0;
         else if (start) cycle_cnt <= 1;
         else if (cycle_cnt != '0) cycle_cnt <= cycle_cnt + 1;
     end
 
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk_out or negedge rst_n) begin
         if (!rst_n) begin
             output_valid <= 1'b0;
             for (int i = 0; i < N; i++)

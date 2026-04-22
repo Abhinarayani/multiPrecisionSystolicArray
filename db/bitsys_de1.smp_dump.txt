@@ -1,0 +1,24 @@
+
+State Machine - |bitsys_uart_top|state
+Name state.S_TX_WAIT state.S_TX_SEND state.S_TX_LOAD state.S_WAIT_VALID state.S_FEED state.S_RX state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 
+state.S_RX 0 0 0 0 0 1 1 
+state.S_FEED 0 0 0 0 1 0 1 
+state.S_WAIT_VALID 0 0 0 1 0 0 1 
+state.S_TX_LOAD 0 0 1 0 0 0 1 
+state.S_TX_SEND 0 1 0 0 0 0 1 
+state.S_TX_WAIT 1 0 0 0 0 0 1 
+
+State Machine - |bitsys_uart_top|uart_tx:u_tx|state
+Name state.STOP state.DATA state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |bitsys_uart_top|uart_rx:u_rx|state
+Name state.STOP state.DATA state.START state.IDLE 
+state.IDLE 0 0 0 0 
+state.START 0 0 1 1 
+state.DATA 0 1 0 1 
+state.STOP 1 0 0 1 

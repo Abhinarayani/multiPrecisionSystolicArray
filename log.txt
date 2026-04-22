@@ -1,0 +1,140 @@
+# [        195549720000] Received          16 results (         64 bytes total)
+# 
+# --- Result Comparison ---
+# Expected Results:
+#           70        -74         87        -91 
+#         -186        202       -233        249 
+#          290       -314        365       -389 
+#         -394        426       -497        529 
+# Received Results:
+#          -89        123       -109       -236 
+#          222       -278        269        362 
+#         -341        419       -407       -472 
+#          452       -536          X          x 
+# 
+# Detailed Comparison:
+#   [0][0] MISMATCH: Expected         70 (0x00000046), Got        -89 (0xffffffa7)
+#   [0][1] MISMATCH: Expected        -74 (0xffffffb6), Got        123 (0x0000007b)
+#   [0][2] MISMATCH: Expected         87 (0x00000057), Got       -109 (0xffffff93)
+#   [0][3] MISMATCH: Expected        -91 (0xffffffa5), Got       -236 (0xffffff14)
+#   [1][0] MISMATCH: Expected       -186 (0xffffff46), Got        222 (0x000000de)
+#   [1][1] MISMATCH: Expected        202 (0x000000ca), Got       -278 (0xfffffeea)
+#   [1][2] MISMATCH: Expected       -233 (0xffffff17), Got        269 (0x0000010d)
+#   [1][3] MISMATCH: Expected        249 (0x000000f9), Got        362 (0x0000016a)
+#   [2][0] MISMATCH: Expected        290 (0x00000122), Got       -341 (0xfffffeab)
+#   [2][1] MISMATCH: Expected       -314 (0xfffffec6), Got        419 (0x000001a3)
+#   [2][2] MISMATCH: Expected        365 (0x0000016d), Got       -407 (0xfffffe69)
+#   [2][3] MISMATCH: Expected       -389 (0xfffffe7b), Got       -472 (0xfffffe28)
+#   [3][0] MISMATCH: Expected       -394 (0xfffffe76), Got        452 (0x000001c4)
+#   [3][1] MISMATCH: Expected        426 (0x000001aa), Got       -536 (0xfffffde8)
+#   [3][2] MISMATCH: Expected       -497 (0xfffffe0f), Got          X (0x000001xx)
+#   [3][3] MISMATCH: Expected        529 (0x00000211), Got          x (0xxxxxxxxx)
+#   â FAIL - 16 mismatches
+# 
+# ========================================
+#   Test 4: Extreme values
+#   Precision=11, Signed=1, BNN=0
+# ========================================
+# [        195649720000] Sending CMD_SEND_A...
+# [        195649720000] Transmitting byte 0x02
+# [        195736520000] Byte transmitted
+# [        196170520000] Sending A matrix...
+# [        196170520000]   [0][0] = -128 (0x80)
+# [        196170520000]   [0][1] = -128 (0x80)
+# [        196170520000]   [0][2] = -128 (0x80)
+# [        196170520000]   [0][3] = -128 (0x80)
+# [        196170520000]   [1][0] =  127 (0x7f)
+# [        196170520000]   [1][1] =  127 (0x7f)
+# [        196170520000]   [1][2] =  127 (0x7f)
+# [        196170520000]   [1][3] =  127 (0x7f)
+# [        196170520000]   [2][0] =   -1 (0xff)
+# [        196170520000]   [2][1] =    1 (0x01)
+# [        196170520000]   [2][2] =   -1 (0xff)
+# [        196170520000]   [2][3] =    1 (0x01)
+# [        196170520000]   [3][0] =    0 (0x00)
+# [        196170520000]   [3][1] =    0 (0x00)
+# [        196170520000]   [3][2] =    0 (0x00)
+# [        196170520000]   [3][3] =    0 (0x00)
+# [        196170520000] Transmitting byte 0x80
+# [        196257320000] Byte transmitted
+# [        196257320000] Transmitting byte 0x7f
+# [        196344120000] Byte transmitted
+# [        196344120000] Transmitting byte 0xff
+# [        196430920000] Byte transmitted
+# [        196430920000] Transmitting byte 0x00
+# [        196517720000] Byte transmitted
+# [        196517720000] Transmitting byte 0x80
+# [        196604520000] Byte transmitted
+# [        196604520000] Transmitting byte 0x7f
+# [        196691320000] Byte transmitted
+# [        196691320000] Transmitting byte 0x01
+# [        196778120000] Byte transmitted
+# [        196778120000] Transmitting byte 0x00
+# [        196864920000] Byte transmitted
+# [        196864920000] Transmitting byte 0x80
+# [        196951720000] Byte transmitted
+# [        196951720000] Transmitting byte 0x7f
+# [        197038520000] Byte transmitted
+# [        197038520000] Transmitting byte 0xff
+# [        197125320000] Byte transmitted
+# [        197125320000] Transmitting byte 0x00
+# [        197212120000] Byte transmitted
+# [        197212120000] Transmitting byte 0x80
+# [        197298920000] Byte transmitted
+# [        197298920000] Transmitting byte 0x7f
+# [        197385720000] Byte transmitted
+# [        197385720000] Transmitting byte 0x01
+# [        197472520000] Byte transmitted
+# [        197472520000] Transmitting byte 0x00
+# [        197559320000] Byte transmitted
+# [        197559320000] Sent          16 bytes for A matrix
+# [        198427320000] Sending CMD_SEND_B...
+# [        198427320000] Transmitting byte 0x03
+# [        198514120000] Byte transmitted
+# [        198948120000] Sending B matrix...
+# [        198948120000]   [0][0] =    1 (0x01)
+# [        198948120000]   [0][1] =    0 (0x00)
+# [        198948120000]   [0][2] =    0 (0x00)
+# [        198948120000]   [0][3] =    0 (0x00)
+# [        198948120000]   [1][0] =    0 (0x00)
+# [        198948120000]   [1][1] =    1 (0x01)
+# [        198948120000]   [1][2] =    0 (0x00)
+# [        198948120000]   [1][3] =    0 (0x00)
+# [        198948120000]   [2][0] =    0 (0x00)
+# [        198948120000]   [2][1] =    0 (0x00)
+# [        198948120000]   [2][2] =    1 (0x01)
+# [        198948120000]   [2][3] =    0 (0x00)
+# [        198948120000]   [3][0] =    0 (0x00)
+# [        198948120000]   [3][1] =    0 (0x00)
+# [        198948120000]   [3][2] =    0 (0x00)
+# [        198948120000]   [3][3] =    1 (0x01)
+# [        198948120000] Transmitting byte 0x01
+# [        199034920000] Byte transmitted
+# [        199034920000] Transmitting byte 0x00
+# [        199121720000] Byte transmitted
+# [        199121720000] Transmitting byte 0x00
+# [        199208520000] Byte transmitted
+# [        199208520000] Transmitting byte 0x00
+# [        199295320000] Byte transmitted
+# [        199295320000] Transmitting byte 0x00
+# [        199382120000] Byte transmitted
+# [        199382120000] Transmitting byte 0x01
+# [        199468920000] Byte transmitted
+# [        199468920000] Transmitting byte 0x00
+# [        199555720000] Byte transmitted
+# [        199555720000] Transmitting byte 0x00
+# [        199642520000] Byte transmitted
+# [        199642520000] Transmitting byte 0x00
+# [        199729320000] Byte transmitted
+# [        199729320000] Transmitting byte 0x00
+# [        199816120000] Byte transmitted
+# [        199816120000] Transmitting byte 0x01
+# [        199902920000] Byte transmitted
+# [        199902920000] Transmitting byte 0x00
+# [        199989720000] Byte transmitted
+# [        199989720000] Transmitting byte 0x00
+# 
+# [ERROR] Simulation timeout!
+# [        200000000000] Test may have hung waiting for UART data
+# ** Note: $finish    : /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv(489)
+#    Time: 200 ms  Iteration: 0  Instance: /tb_uart_design

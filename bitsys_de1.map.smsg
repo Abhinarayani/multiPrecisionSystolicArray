@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at uart_rx.sv(13): object "data" differs only in case from object "DATA" in the same scope File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv Line: 13

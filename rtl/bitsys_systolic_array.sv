@@ -35,6 +35,8 @@
 //   output_valid: high for 1 cycle when c_out holds the final result
 //   c_out[i][j] : latched output matrix (signed 32-bit accumulators)
 
+`include "bitsys_pkg.sv"
+
 module bitsys_systolic_array
     import bitsys_pkg::*;
 #(
@@ -121,13 +123,12 @@ module bitsys_systolic_array
     //         b_v[0][j] = b_skew[j][j];
     // end
 
-    // Combinational assignment using generate
+// --- REPLACE WITH THIS ---
     generate
-        genvar i, j;
-        for (i = 0; i < N; i = i + 1) begin : init_a_h
+        for (genvar i = 0; i < N; i++) begin : init_a_h
             assign a_h[i][0] = a_skew[i][i];
         end
-        for (j = 0; j < N; j = j + 1) begin : init_b_v
+        for (genvar j = 0; j < N; j++) begin : init_b_v
             assign b_v[0][j] = b_skew[j][j];
         end
     endgenerate
@@ -200,22 +201,21 @@ module bitsys_systolic_array
     logic signed [31:0] pe_result [0:N-1][0:N-1];
 
     generate
-        genvar ii, jj;
-        for (ii = 0; ii < N; ii = ii + 1) begin : row_g
-            for (jj = 0; jj < N; jj = jj + 1) begin : col_g
+        for (genvar i = 0; i < N; i++) begin : row_g
+            for (genvar j = 0; j < N; j++) begin : col_g
                 bitsys_mac u_mac (
                     .clk      (clk),
                     .rst_n    (rst_n),
-                    .clear    (clear_sr[ii+jj]),   // fires when first product arrives
+                    .clear    (clear_sr[i+j]),   // fires when first product arrives
                     .en       (data_valid),
-                    .a_in     (a_h[ii][jj]),
-                    .b_in     (b_v[ii][jj]),
+                    .a_in     (a_h[i][j]),
+                    .b_in     (b_v[i][j]),
                     .prec     (prec),
                     .is_signed(is_signed),
                     .bnn_mode (bnn_mode),
-                    .a_out    (a_h[ii][jj+1]),
-                    .b_out    (b_v[ii+1][jj]),
-                    .result   (pe_result[ii][jj])
+                    .a_out    (a_h[i][j+1]),
+                    .b_out    (b_v[i+1][j]),
+                    .result   (pe_result[i][j])
                 );
             end
         end

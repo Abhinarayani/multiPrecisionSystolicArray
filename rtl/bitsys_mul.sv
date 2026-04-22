@@ -31,8 +31,6 @@
 //   Subtract PE(i,j) iff exactly one of {i mod N_c, j mod N_c} == N_c−1.
 //   For 1-bit (N_c=1): both are sign bits → XOR=0 → no subtract.
 
-`include "bitsys_pkg.sv"
-
 module bitsys_mul
     import bitsys_pkg::*;
 (

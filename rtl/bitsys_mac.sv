@@ -16,8 +16,6 @@
 //   - Accumulator is gated with enable = (clear | en)
 //   - Data path is gated with enable = en
 
-`include "bitsys_pkg.sv"
-
 module bitsys_mac
     import bitsys_pkg::*;
 (

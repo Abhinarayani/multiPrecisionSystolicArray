@@ -15,8 +15,6 @@
 //   PREC_1B (8 ch ×2b)  : sum of eight sign-extended 2-bit channels
 //                          (±1 in XNOR BNN mode → popcount−N equivalent)
 
-`include "bitsys_pkg.sv"
-
 module bitsys_accu_conv
     import bitsys_pkg::*;
 (

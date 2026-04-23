@@ -196,6 +196,47 @@ module bitsys_systolic_array
     );
 
     // -----------------------------------------------------------------------
+    // Coarse-grained PE clock gating (clusters)
+    // For N=4, 4 clusters (2x2 each): 0=top-left, 1=top-right, 2=bottom-left, 3=bottom-right
+    // Enable clusters based on precision to gate unused PEs
+    // -----------------------------------------------------------------------
+    logic cluster_en [0:3];  // Enable for each cluster
+    logic clk_pe [0:3];      // Gated clock for each cluster
+    
+    // Enable logic based on precision (adjust based on paper's requirements)
+    // Example: higher precision uses more clusters
+    assign cluster_en[0] = 1'b1;  // Always enabled (core cluster)
+    assign cluster_en[1] = (prec == 2'b00) || (prec == 2'b01);  // Enabled for higher precisions
+    assign cluster_en[2] = (prec == 2'b00);  // Enabled only for highest precision
+    assign cluster_en[3] = (prec == 2'b00);  // Enabled only for highest precision
+    
+    // Clock gates for each cluster
+    bitsys_clock_gate u_pe_gate_0 (
+        .clk           (clk),
+        .enable        (cluster_en[0] & data_valid),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_pe[0])
+    );
+    bitsys_clock_gate u_pe_gate_1 (
+        .clk           (clk),
+        .enable        (cluster_en[1] & data_valid),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_pe[1])
+    );
+    bitsys_clock_gate u_pe_gate_2 (
+        .clk           (clk),
+        .enable        (cluster_en[2] & data_valid),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_pe[2])
+    );
+    bitsys_clock_gate u_pe_gate_3 (
+        .clk           (clk),
+        .enable        (cluster_en[3] & data_valid),
+        .test_enable   (1'b0),
+        .gated_clk     (clk_pe[3])
+    );
+
+    // -----------------------------------------------------------------------
     // PE grid (generate)
     // -----------------------------------------------------------------------
     logic signed [31:0] pe_result [0:N-1][0:N-1];
@@ -203,8 +244,15 @@ module bitsys_systolic_array
     generate
         for (genvar i = 0; i < N; i++) begin : row_g
             for (genvar j = 0; j < N; j++) begin : col_g
+                // Determine cluster index for coarse-grained gating
+                logic pe_clk;
+                if (i < 2 && j < 2)       assign pe_clk = clk_pe[0];
+                else if (i < 2 && j >= 2) assign pe_clk = clk_pe[1];
+                else if (i >= 2 && j < 2) assign pe_clk = clk_pe[2];
+                else                      assign pe_clk = clk_pe[3];
+                
                 bitsys_mac u_mac (
-                    .clk      (clk),
+                    .clk      (pe_clk),  // Use cluster-gated clock
                     .rst_n    (rst_n),
                     .clear    (clear_sr[i+j]),   // fires when first product arrives
                     .en       (data_valid),

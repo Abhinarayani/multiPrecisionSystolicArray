@@ -27,8 +27,26 @@
 // Uses integrated clock gating (ICG) cells to reduce dynamic power:
 //   - Skew registers (a_skew, b_skew) gated by data_valid
 //   - Clear shift register gated by (start | data_valid)
-//   - Cycle counter gated by (start | (cycle_cnt != 0 && cycle_cnt <= DONE_CYCLE))
-//   - Output capture uses FF clock-enable (not ICG) to avoid latch-delay race on clk_out
+//   - Cycle counter gated by (start | (cycle_cnt != 0 && cycle_cnt < DONE_CYCLE))
+//   - Output capture uses FF clock-enable (not ICG) to avoid latch-delay race
+//
+// --- Input Sparsity Detection (pe_skip, self-contained per PE) ---
+// Targets 2/4/8-bit quantized activations after ReLU, where 33–60% of input
+// values are exactly zero.
+//
+// Each bitsys_mac PE independently detects whether its own a_in is all-zero
+// using an 8-input OR-reduction (pe_skip = ~|a_in & ~bnn_mode).  No external
+// signal or pipeline is needed: a_in already carries the skewed, pass-through-
+// registered data for that exact PE at that exact cycle.  If it is zero, the
+// contribution is zero and three savings activate:
+//
+//   - a_gated = 8'h00  → bitsys_mul AND-array switching suppressed
+//   - accu_en = clear | (en & ~pe_skip)  → clk_accu gated off on en cycles
+//   - data_en = en  (not masked — zero must propagate right so downstream PEs
+//     in the same row can independently detect their own pe_skip)
+//
+// BNN mode (bnn_mode=1) disables pe_skip globally: in XNOR ±1 encoding the
+// bit value 0 represents −1, not absence of data.
 //
 // --- Ports ---
 //   a_in[i]     : element of A row i, column-streamed each cycle
@@ -125,7 +143,6 @@ module bitsys_systolic_array
     //         b_v[0][j] = b_skew[j][j];
     // end
 
-// --- REPLACE WITH THIS ---
     generate
         for (genvar i = 0; i < N; i++) begin : init_a_h
             assign a_h[i][0] = a_skew[i][i];

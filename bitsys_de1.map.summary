@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Apr 21 23:42:46 2026
+Analysis & Synthesis Status : Successful - Wed Apr 22 17:14:05 2026
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : bitsys_de1
 Top-level Entity Name : bitsys_uart_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2321
-Total pins : 4
+Total registers : 2365
+Total pins : 6
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

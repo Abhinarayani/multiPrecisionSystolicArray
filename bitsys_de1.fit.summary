@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Apr 21 23:48:03 2026
+Fitter Status : Successful - Wed Apr 22 17:19:37 2026
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : bitsys_de1
 Top-level Entity Name : bitsys_uart_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 11,358 / 32,070 ( 35 % )
-Total registers : 2606
-Total pins : 4 / 457 ( < 1 % )
+Logic utilization (in ALMs) : 11,414 / 32,070 ( 36 % )
+Total registers : 2616
+Total pins : 6 / 457 ( 1 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

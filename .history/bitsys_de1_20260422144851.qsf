@@ -1,0 +1,70 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2025  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+# Date created = 16:53:38  April 21, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		bitsys_de1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY bitsys_uart_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:53:38  APRIL 21, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_pe_t1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_pe_t2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_mul.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_accu_conv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_mac.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_clock_gate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_systolic_array.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/uart_rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/uart_tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/bitsys_uart_top.sv
+set_global_assignment -name SYNTH_GATED_CLOCK_CONVERSION OFF
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_location_assignment PIN_AF14 -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_location_assignment PIN_AA14 -to rst_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
+set_location_assignment PIN_B25 -to uart_rx_pin
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_rx_pin
+set_location_assignment PIN_C25 -to uart_tx_pin
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uart_tx_pin
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

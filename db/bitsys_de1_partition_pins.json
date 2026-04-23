@@ -4,7 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "led_tx",
+					"strict" : false
+				},
+				{
 					"name" : "uart_tx_pin",
+					"strict" : false
+				},
+				{
+					"name" : "led_rx",
 					"strict" : false
 				},
 				{

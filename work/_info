@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f MIXED_VERSIONS
 Z0 !s12c _opt
 Z1 !s99 nomlopt
 Z2 !s12c _opt1
@@ -55,7 +56,6 @@ R0
 R1
 R0
 R1
-!s11f vlog 2024.3_2 2024.11, Nov 25 2024
 !s112 1.1
 !i10d 8192
 !i10e 25
@@ -76,6 +76,7 @@ Z9 o-quiet -auto_acc_if_foreign -work work +acc
 Z10 tCvgOpt 0
 n@_opt
 Z11 OE;O;2024.3_2;79
+R4
 T_opt1
 !s110 1776830434
 V?`P`mL@NWPTW]L5k8aPUR3
@@ -260,35 +261,35 @@ R17
 R18
 R10
 Xbitsys_pkg
-Z20 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv
-R12
-Z21 !s110 1776831959
+Z20 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z21 !s110 1777338968
 !i10b 1
-!s100 NHg^DC?Z`94Q`Wze?b96:2
-Ie7Afj?aRB7h]6UA3Adgag3
+!s100 VJ>^U8=Z4B06he[m<C6Uf2
+Z22 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I87[5Ub:hcBn`Z4gPK[D_Q2
+V87[5Ub:hcBn`Z4gPK[D_Q2
 S1
-R4
-R19
-Z22 8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv
-Z23 F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv
-!i122 677
-Z24 L0 5 0
-Ve7Afj?aRB7h]6UA3Adgag3
-R16
+Z23 dC:/Users/ADITI/Desktop/ECE751/multiPrecisionSystolicArray
+w1774817582
+8rtl\bitsys_pkg.sv
+Frtl\bitsys_pkg.sv
+!i122 685
+L0 6 0
+Z24 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z25 !s108 1776831959.000000
-Z26 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv|
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv|
-!i113 0
-R18
+Z25 !s108 1777338967.000000
+Z26 !s107 rtl\bitsys_pkg.sv|rtl/normal_systolic_array.sv|
+Z27 !s90 -sv|rtl/normal_systolic_array.sv|
+!i113 1
+o-sv
 R10
 vbitsys_systolic_array
 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv
 R12
 DXx4 work 10 bitsys_pkg 0 22 8^VldLNQCMSbL:81GXf3z2
-R21
+Z28 !s110 1776831959
 !i10b 1
 !s100 5`Io;ZeB1d7eESkQS=Mob1
 IFSJQgdW5nM=klX[T1[CTO2
@@ -304,7 +305,7 @@ R16
 r1
 !s85 0
 31
-R25
+Z29 !s108 1776831959.000000
 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv|
 !i113 0
@@ -314,7 +315,7 @@ vbitsys_uart_top
 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv
 R12
 R13
-R21
+R28
 !i10b 1
 !s100 0[MZ9WU1bDSLV:^hMUdW@0
 IzRP22<6Ndm9L4Uo5M@1<@2
@@ -330,17 +331,94 @@ R16
 r1
 !s85 0
 31
-R25
+R29
 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv|
 !i113 0
 R18
 R10
+vnormal_mac
+R20
+!s110 1777338967
+!i10b 1
+!s100 1diVKf0hbLXWn1;eF7:D23
+R22
+IcG>]9V:Q0zNC?BD]`e;@^0
+R15
+S1
+R23
+w1777337367
+8rtl/normal_mac.sv
+Frtl/normal_mac.sv
+!i122 684
+L0 4 35
+R24
+r1
+!s85 0
+31
+R25
+!s107 rtl/normal_mac.sv|
+!s90 -sv|rtl/normal_mac.sv|
+!i113 1
+o-sv
+R10
+vnormal_systolic_array
+R20
+Z30 DXx4 work 10 bitsys_pkg 0 22 87[5Ub:hcBn`Z4gPK[D_Q2
+R21
+!i10b 1
+!s100 @MiJhObIYBQfD^K[B^lnh1
+R22
+I2mWiBXOc;>icGDlf@IVY^0
+R15
+S1
+R23
+w1777337392
+8rtl/normal_systolic_array.sv
+Frtl/normal_systolic_array.sv
+!i122 685
+L0 6 112
+R24
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 1
+o-sv
+R10
+vnormal_uart_top
+R20
+R30
+Z31 !s110 1777337447
+!i10b 1
+!s100 cnbI7<oIoYhh2oVco6]8a3
+R22
+IXdHbf]0NXzFGW5Cj4F;IT2
+R15
+S1
+R23
+w1777337419
+8rtl/normal_uart_top.sv
+Frtl/normal_uart_top.sv
+!i122 682
+L0 6 145
+R24
+r1
+!s85 0
+31
+Z32 !s108 1777337446.000000
+Z33 !s107 rtl\bitsys_pkg.sv|rtl/normal_uart_top.sv|rtl/normal_systolic_array.sv|rtl/normal_mac.sv|rtl/uart_tx.sv|rtl/uart_rx.sv|rtl/bitsys_pkg.sv|
+Z34 !s90 -sv|rtl/bitsys_pkg.sv|rtl/uart_rx.sv|rtl/uart_tx.sv|rtl/normal_mac.sv|rtl/normal_systolic_array.sv|rtl/normal_uart_top.sv|
+!i113 1
+o-sv
+R10
 vtb_bitsys_mul
 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_mul.sv
 R12
 DXx4 work 10 bitsys_pkg 0 22 ]089cN>R@nhd[<F8V_<eg0
-R21
+R28
 !i10b 1
 !s100 El>8a15]Gb?bI5QB86U]_0
 IAXU[jM2fZa7O7zoJF0Ema1
@@ -356,25 +434,25 @@ R16
 r1
 !s85 0
 31
-R25
+R29
 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_mul.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_mul.sv|
 !i113 0
 R18
 R10
 vtb_bitsys_systolic_array
-R20
+2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv
 R12
 R13
-R21
+R28
 !i10b 1
 !s100 zZ4lGeY1Tb5oM;g>8iiPe2
 IO5R4l??W<8bTiWT6Ei^XV0
 S1
 R4
 R19
-R22
-R23
+8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv
+F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv
 !i122 677
 L0 20 178
 R15
@@ -382,9 +460,9 @@ R16
 r1
 !s85 0
 31
-R25
-R26
-R27
+R29
+!s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_bitsys_systolic_array.sv|
 !i113 0
 R18
 R10
@@ -392,7 +470,7 @@ vtb_bitsys_uart_top
 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv
 R12
 R13
-R21
+R28
 !i10b 1
 !s100 kfM@KfccW<gMLmO<VI@B91
 INz0dnH`@O?z>`H@P<cGoF0
@@ -408,25 +486,51 @@ R16
 r1
 !s85 0
 31
-R25
+R29
 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv|
 !i113 0
 R18
 R10
+vtb_normal_throughput
+R20
+R30
+R21
+!i10b 1
+!s100 <;HfE8k@L]mbzbEYK3jWh3
+R22
+IgWZ:2idA=;FdQz?K?B^kX2
+R15
+S1
+R23
+w1777338951
+8tb/tb_normal_throughput.sv
+Ftb/tb_normal_throughput.sv
+!i122 686
+L0 6 180
+R24
+r1
+!s85 0
+31
+!s108 1777338968.000000
+!s107 tb/tb_normal_throughput.sv|
+!s90 -sv|tb/tb_normal_throughput.sv|
+!i113 1
+o-sv
+R10
 vtb_uart_debug
-Z28 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv
+Z35 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv
 R12
 DXx4 work 14 uart_debug_pkg 0 22 3RQKY0P7RjLYVmCzB3ncz3
-Z29 !s110 1776830430
+Z36 !s110 1776830430
 !i10b 1
 !s100 SjlMbR`@kAZazgYIYBzcj3
 IWj@LDTg1N<Ng0`A<VN`N42
 S1
 R4
-Z30 w1776819272
-Z31 8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv
-Z32 F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv
+Z37 w1776819272
+Z38 8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv
+Z39 F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv
 !i122 667
 L0 13 160
 R15
@@ -434,25 +538,25 @@ R16
 r1
 !s85 0
 31
-Z33 !s108 1776830430.000000
-Z34 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv|
-Z35 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv|
+Z40 !s108 1776830430.000000
+Z41 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv|
+Z42 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_debug.sv|
 !i113 0
 R18
 R10
 vtb_uart_design
-Z36 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv
+Z43 2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv
 R12
 DXx4 work 11 uart_tb_pkg 0 22 <[Nh9_J?HzEKYf3FbO5Jf1
-R29
+R36
 !i10b 1
 !s100 Bf<`n8Oz:0lH8@iOSEQOQ2
 I50P^4a<ZFNT9I8I4bUDmS2
 S1
 R4
-Z37 w1776820606
-Z38 8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv
-Z39 F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv
+Z44 w1776820606
+Z45 8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv
+Z46 F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv
 !i122 666
 L0 27 466
 R15
@@ -460,74 +564,74 @@ R16
 r1
 !s85 0
 31
-R33
-Z40 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv|
-Z41 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv|
+R40
+Z47 !s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv|
+Z48 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_uart_design.sv|
 !i113 0
 R18
 R10
 Xuart_debug_pkg
-R28
+R35
 R12
-R29
+R36
 !i10b 1
 !s100 8^S6UAobM]lGCl7B4_e601
 I3RQKY0P7RjLYVmCzB3ncz3
 S1
 R4
-R30
-R31
-R32
+R37
+R38
+R39
 !i122 667
-R24
+L0 5 0
 V3RQKY0P7RjLYVmCzB3ncz3
 R16
 r1
 !s85 0
 31
-R33
-R34
-R35
+R40
+R41
+R42
 !i113 0
 R18
 R10
 vuart_rx
-2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv
-R12
-R21
+R20
+R31
 !i10b 1
 !s100 VmZRdbN?SmhkSLGdd<JnH1
-IcgOGb0Zz`]fe5jG63II3M2
-S1
-R4
-Z42 w1776803747
-8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv
-F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv
-!i122 678
-L0 8 120
+R22
+IVBh2H1=UE2A]3B>5QJgHM2
 R15
-R16
+S1
+R23
+Z49 w1776894149
+8rtl/uart_rx.sv
+Frtl/uart_rx.sv
+!i122 682
+L0 8 120
+R24
 r1
 !s85 0
 31
-R25
-!s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv|
-!i113 0
-R18
+R32
+R33
+R34
+!i113 1
+o-sv
 R10
 Xuart_tb_pkg
-R36
+R43
 R12
-R29
+R36
 !i10b 1
 !s100 51RgDLCf1;B32;;U?QZMO0
 I<[Nh9_J?HzEKYf3FbO5Jf1
 S1
 R4
-R37
-R38
-R39
+R44
+R45
+R46
 !i122 666
 L0 11 0
 V<[Nh9_J?HzEKYf3FbO5Jf1
@@ -535,34 +639,34 @@ R16
 r1
 !s85 0
 31
-R33
 R40
-R41
+R47
+R48
 !i113 0
 R18
 R10
 vuart_tx
-2/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv
-R12
-R21
+R20
+R31
 !i10b 1
 !s100 `W_H_>[`EZ^_JfjlFeRea3
-ILN;eondP5MV5Il5[ARzV[2
-S1
-R4
-R42
-8/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv
-F/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv
-!i122 679
-L0 8 108
+R22
+I47YCV86_]_I7knW;OiDLM0
 R15
-R16
+S1
+R23
+R49
+8rtl/uart_tx.sv
+Frtl/uart_tx.sv
+!i122 682
+L0 8 108
+R24
 r1
 !s85 0
 31
-R25
-!s107 /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv|
-!i113 0
-R18
+R32
+R33
+R34
+!i113 1
+o-sv
 R10

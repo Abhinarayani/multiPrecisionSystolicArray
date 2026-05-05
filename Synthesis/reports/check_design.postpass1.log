@@ -1,0 +1,145 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06
+Date:        Fri Apr 24 15:11:40 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     64
+    Unconnected ports (LINT-28)                                    64
+
+Cells                                                              32
+    Nets connected to multiple pins on same cell (LINT-33)         32
+--------------------------------------------------------------------------------
+
+Warning: In design 'bitsys_mac_1_DW01_add_0_DW01_add_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_1_DW01_add_0_DW01_add_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_2_DW01_add_0_DW01_add_107', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_2_DW01_add_0_DW01_add_107', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_3_DW01_add_0_DW01_add_202', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_3_DW01_add_0_DW01_add_202', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_4_DW01_add_0_DW01_add_297', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_4_DW01_add_0_DW01_add_297', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_5_DW01_add_0_DW01_add_392', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_5_DW01_add_0_DW01_add_392', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_6_DW01_add_0_DW01_add_487', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_6_DW01_add_0_DW01_add_487', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_7_DW01_add_0_DW01_add_582', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_7_DW01_add_0_DW01_add_582', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_8_DW01_add_0_DW01_add_677', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_8_DW01_add_0_DW01_add_677', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_9_DW01_add_0_DW01_add_772', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_9_DW01_add_0_DW01_add_772', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_10_DW01_add_0_DW01_add_867', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_10_DW01_add_0_DW01_add_867', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_11_DW01_add_0_DW01_add_962', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_11_DW01_add_0_DW01_add_962', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_12_DW01_add_0_DW01_add_1057', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_12_DW01_add_0_DW01_add_1057', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_13_DW01_add_0_DW01_add_1152', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_13_DW01_add_0_DW01_add_1152', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_14_DW01_add_0_DW01_add_1247', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_14_DW01_add_0_DW01_add_1247', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_15_DW01_add_0_DW01_add_1342', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_15_DW01_add_0_DW01_add_1342', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_0_DW01_add_0_DW01_add_1437', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_0_DW01_add_0_DW01_add_1437', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_15_DW01_add_1_DW01_add_1532', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_15_DW01_add_1_DW01_add_1532', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_14_DW01_add_1_DW01_add_1542', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_14_DW01_add_1_DW01_add_1542', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_13_DW01_add_1_DW01_add_1552', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_13_DW01_add_1_DW01_add_1552', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_12_DW01_add_1_DW01_add_1562', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_12_DW01_add_1_DW01_add_1562', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_11_DW01_add_1_DW01_add_1572', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_11_DW01_add_1_DW01_add_1572', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_10_DW01_add_1_DW01_add_1582', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_10_DW01_add_1_DW01_add_1582', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_9_DW01_add_1_DW01_add_1592', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_9_DW01_add_1_DW01_add_1592', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_8_DW01_add_1_DW01_add_1602', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_8_DW01_add_1_DW01_add_1602', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_7_DW01_add_1_DW01_add_1612', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_7_DW01_add_1_DW01_add_1612', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_6_DW01_add_1_DW01_add_1622', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_6_DW01_add_1_DW01_add_1622', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_5_DW01_add_1_DW01_add_1632', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_5_DW01_add_1_DW01_add_1632', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_4_DW01_add_1_DW01_add_1642', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_4_DW01_add_1_DW01_add_1642', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_3_DW01_add_1_DW01_add_1652', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_3_DW01_add_1_DW01_add_1652', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_2_DW01_add_1_DW01_add_1662', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_2_DW01_add_1_DW01_add_1662', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_1_DW01_add_1_DW01_add_1672', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_1_DW01_add_1_DW01_add_1672', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_0_DW01_add_4_DW01_add_1685', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_accu_conv_0_DW01_add_4_DW01_add_1685', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'bitsys_mac_0', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_accu_conv_0', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_mac_1', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_2', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_3', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_4', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_5', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_6', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_7', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_8', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_9', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_10', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_11', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_12', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_13', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_14', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_mac_15', the same net is connected to more than one pin on submodule 'add_90'. (LINT-33)
+   Net 'n40' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]'.
+Warning: In design 'bitsys_accu_conv_1', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_2', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_3', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_4', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_5', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_6', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_7', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_8', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_9', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_10', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_11', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_12', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_13', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_14', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+Warning: In design 'bitsys_accu_conv_15', the same net is connected to more than one pin on submodule 'add_0_root_add_0_root_add_71_7'. (LINT-33)
+   Net 'n1' is connected to pins 'A[19]', 'A[18]'', 'A[17]', 'A[16]', 'A[15]', 'A[14]', 'A[13]', 'A[12]', 'A[11]', 'A[10]', 'A[9]', 'A[8]', 'A[7]', 'A[6]', 'A[5]', 'A[4]', 'A[3]'.
+1

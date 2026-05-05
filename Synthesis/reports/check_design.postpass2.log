@@ -1,0 +1,15 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06
+Date:        Fri Apr 24 15:13:41 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'bitsys_systolic_array', net 'row_g[3].col_g[3].u_mac/clk_data' driven by pin 'row_g[3].col_g[3].u_mac/u_clk_gate_data/U2/Y' has no loads. (LINT-2)
+1

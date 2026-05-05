@@ -1,0 +1,16 @@
+Running PRESTO HDLC
+Compiling source file ../rtl/bitsys_pkg.sv
+Compiling source file ../rtl/bitsys_systolic_array.sv
+Compiling source file ../rtl/bitsys_pe_t1.sv
+Compiling source file ../rtl/bitsys_pe_t2.sv
+Compiling source file ../rtl/bitsys_mac.sv
+Compiling source file ../rtl/bitsys_mul.sv
+Compiling source file ../rtl/bitsys_accu_conv.sv
+Compiling source file ../rtl/bitsys_clock_gate.sv
+Presto compilation completed successfully.
+Loading db file '/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_OA_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm_211120.db'
+Loading db file '/filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.db'
+1

@@ -1,0 +1,97 @@
+Loading db file '/cae/apps/data/synopsys-2025/syn/X-2025.06/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2025/syn/X-2025.06/libraries/syn/standard.sldb'
+  Loading link library 'asap7sc7p5t_AO_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_OA_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_INVBUF_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_SEQ_RVT_TT_nldm_220123'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../rtl/bitsys_systolic_array.sv:201: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process in routine 'bitsys_systolic_array' in file
+	 ../rtl/bitsys_systolic_array.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|     a_skew_reg      | Flip-flop |  80   |  Y  | N  | None  | Async | N  |  94  |
+|     b_skew_reg      | Flip-flop |  80   |  Y  | N  | None  | Async | N  |  94  |
+|    clear_sr_reg     | Flip-flop |  10   |  Y  | N  | None  | Async | N  | 143  |
+|   done_pulse_reg    | Flip-flop |   1   |  N  | N  | None  | Async | N  | 198  |
+|    cycle_cnt_reg    | Flip-flop |   5   |  Y  | N  | None  | Async | N  | 240  |
+|  output_valid_reg   | Flip-flop |   1   |  N  | N  | None  | Async | N  | 265  |
+|      c_out_reg      | Flip-flop |  512  |  Y  | N  | None  | Async | N  | 265  |
+==================================================================================
+Presto compilation completed successfully. (bitsys_systolic_array)
+Module: bitsys_systolic_array, Ports: 584, Input: 71, Output: 513, Inout: 0
+Module: bitsys_systolic_array, Registers: 689, Async set/reset: 689, Sync set/reset: 0
+Information: Module bitsys_systolic_array report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'bitsys_systolic_array'.
+Information: Building the design 'bitsys_clock_gate'. (HDL-193)
+
+Inferred memory devices in process in routine 'bitsys_clock_gate' in file
+	 ../rtl/bitsys_clock_gate.sv'.
+==============================================================================
+|    Register Name    | Type  | Width | Bus | MB |  Set  | Reset | ST | Line |
+==============================================================================
+|    latch_out_reg    | Latch |   1   |  N  | N  | None  | None  | -  |  25  |
+==============================================================================
+Presto compilation completed successfully. (bitsys_clock_gate)
+Module: bitsys_clock_gate, Ports: 4, Input: 3, Output: 1, Inout: 0
+Module: bitsys_clock_gate, Registers: 1, Async set/reset: 0, Sync set/reset: 0
+Information: Module bitsys_clock_gate report end. (ELAB-965)
+Information: Building the design 'bitsys_mac'. (HDL-193)
+
+Inferred memory devices in process in routine 'bitsys_mac' in file
+	 ../rtl/bitsys_mac.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|     result_reg      | Flip-flop |  32   |  Y  | N  | None  | Async | N  |  82  |
+|      b_out_reg      | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  95  |
+|      a_out_reg      | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  95  |
+==================================================================================
+Presto compilation completed successfully. (bitsys_mac)
+Module: bitsys_mac, Ports: 72, Input: 24, Output: 48, Inout: 0
+Module: bitsys_mac, Registers: 48, Async set/reset: 48, Sync set/reset: 0
+Information: Module bitsys_mac report end. (ELAB-965)
+Information: Building the design 'bitsys_mul'. (HDL-193)
+Warning:  ../rtl/bitsys_mul.sv:128: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/bitsys_mul.sv:145: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/bitsys_mul.sv:175: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/bitsys_mul.sv:194: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../rtl/bitsys_mul.sv:71: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ../rtl/bitsys_mul.sv:194: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block in file
+	'../rtl/bitsys_mul.sv'
+============================================================
+|    Line    |  full/ parallel  |      block location      |
+============================================================
+|     66     |    auto/auto     | always block at line 63  |
+|     83     |    auto/auto     | always block at line 76  |
+|     89     |    auto/auto     | always block at line 76  |
+|    119     |    auto/auto     | always block at line 112 |
+============================================================
+Presto compilation completed successfully. (bitsys_mul)
+Module: bitsys_mul, Ports: 36, Input: 20, Output: 16, Inout: 0
+Module: bitsys_mul, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module bitsys_mul report end. (ELAB-965)
+Information: Building the design 'bitsys_accu_conv'. (HDL-193)
+Warning:  ../rtl/bitsys_accu_conv.sv:57: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../rtl/bitsys_accu_conv.sv:69: signed to unsigned conversion occurs. (VER-318)
+Warning:  ../rtl/bitsys_accu_conv.sv:75: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block in file
+	'../rtl/bitsys_accu_conv.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     28     |    auto/auto     | always block at line 27 |
+===========================================================
+Presto compilation completed successfully. (bitsys_accu_conv)
+Module: bitsys_accu_conv, Ports: 39, Input: 19, Output: 20, Inout: 0
+Module: bitsys_accu_conv, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module bitsys_accu_conv report end. (ELAB-965)
+1

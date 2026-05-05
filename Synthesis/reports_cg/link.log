@@ -1,0 +1,15 @@
+
+  Linking design 'bitsys_systolic_array'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  bitsys_systolic_array       /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/bitsys_systolic_array.db
+  asap7sc7p5t_AO_RVT_TT_nldm_211120 (library) /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_AO_RVT_TT_nldm_211120.db
+  asap7sc7p5t_OA_RVT_TT_nldm_211120 (library) /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_OA_RVT_TT_nldm_211120.db
+  asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120 (library) /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.db
+  asap7sc7p5t_INVBUF_RVT_TT_nldm_211120 (library) /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_INVBUF_RVT_TT_nldm_211120.db
+  asap7sc7p5t_SEQ_RVT_TT_nldm_220123 (library) /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/asap7sc7p5t_28/LIB/NLDM/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.db
+  * (4 designs)               /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/Synthesis/bitsys_clock_gate.db, etc
+
+Information: Summary of messages issued during linking: (LINK-1806)
+No messages were issued during linking.
+1

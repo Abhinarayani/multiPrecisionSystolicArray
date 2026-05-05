@@ -1,0 +1,958 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : bitsys_systolic_array
+Version: X-2025.06
+Date   : Fri Apr 24 14:52:19 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_AO_RVT_TT_nldm_211120
+Wire Load Model Mode: segmented
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_clk_gate_skew/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  U22155/Y (OR2x2_ASAP7_75t_R)                           39.30     448.22 r
+  u_clk_gate_skew/latch_out_reg/D (DLLx1_ASAP7_75t_R)     0.00     448.22 r
+  data arrival time                                                448.22
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  u_clk_gate_skew/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -448.22
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9551.73
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -12.96   
+  --------------------------------------------------------------
+  max time borrow                                      9987.04   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_clk_gate_clear/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  U22155/Y (OR2x2_ASAP7_75t_R)                           39.30     448.22 r
+  u_clk_gate_clear/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     448.22 r
+  data arrival time                                                448.22
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  u_clk_gate_clear/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -448.22
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9551.73
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -12.96   
+  --------------------------------------------------------------
+  max time borrow                                      9987.04   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[0].col_g[0].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[0].col_g[0].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[0].col_g[0].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[0].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[0].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[0].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[0].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[0].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[0].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[1].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[1].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[1].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[1].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[1].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[1].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[2].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[2].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[2].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[2].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[2].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[2].col_g[3].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[3].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34210/Y (HB1xp67_ASAP7_75t_R)                         59.57     408.92 r
+  row_g[3].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     408.92 r
+  data arrival time                                                408.92
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[3].col_g[1].u_mac/u_clk_gate_accu/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -408.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9591.03
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.97   
+  --------------------------------------------------------------
+  max time borrow                                      9979.03   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[0].col_g[1].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[0].col_g[1].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[0].col_g[1].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[0].col_g[2].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[0].col_g[2].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[0].col_g[2].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[0].col_g[3].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[0].col_g[3].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[0].col_g[3].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[1].col_g[0].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[1].col_g[0].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[1].col_g[0].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[1].col_g[1].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[1].col_g[1].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[1].col_g[1].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[1].col_g[2].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[1].col_g[2].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[1].col_g[2].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[1].col_g[3].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[1].col_g[3].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[1].col_g[3].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[2].col_g[0].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[2].col_g[0].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[2].col_g[0].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[2].col_g[1].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[2].col_g[1].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[2].col_g[1].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: clk_r_REG1034_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: row_g[3].col_g[2].u_mac/u_clk_gate_data/latch_out_reg
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG1034_S4/CLK (DFFASRHQNx1_ASAP7_75t_R)          0.00       0.00 r
+  clk_r_REG1034_S4/QN (DFFASRHQNx1_ASAP7_75t_R)         188.10     188.10 r
+  U38541/Y (INVx1_ASAP7_75t_R)                           20.72     208.81 f
+  U36665/Y (HB1xp67_ASAP7_75t_R)                         30.02     238.84 f
+  U36664/Y (INVx1_ASAP7_75t_R)                           36.75     275.59 r
+  U32456/Y (NOR5xp2_ASAP7_75t_R)                         25.60     301.19 f
+  U13174/Y (NAND2xp5_ASAP7_75t_R)                        22.62     323.81 r
+  U36663/Y (HB1xp67_ASAP7_75t_R)                         25.53     349.35 r
+  U34211/Y (HB1xp67_ASAP7_75t_R)                         58.33     407.68 r
+  row_g[3].col_g[2].u_mac/u_clk_gate_data/latch_out_reg/D (DLLx1_ASAP7_75t_R)
+                                                          0.00     407.68 r
+  data arrival time                                                407.68
+
+  clock clk (fall edge)                               10000.00   10000.00
+  clock network delay (ideal)                             0.00   10000.00
+  clock uncertainty                                      -0.05    9999.95
+  row_g[3].col_g[2].u_mac/u_clk_gate_data/latch_out_reg/CLK (DLLx1_ASAP7_75t_R)
+                                                          0.00    9999.95 f
+  time borrowed from endpoint                             0.00    9999.95
+  data required time                                              9999.95
+  --------------------------------------------------------------------------
+  data required time                                              9999.95
+  data arrival time                                               -407.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                     9592.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                             10000.00   
+  library setup time                                    -20.70   
+  --------------------------------------------------------------
+  max time borrow                                      9979.30   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+1

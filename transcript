@@ -22,6 +22,36 @@
 # Compile of bitsys_pkg.sv was successful.
 # Compile of bitsys_systolic_array.sv was successful with warnings.
 # Compile of tb_bitsys_mul.sv was successful.
+# Compile of tb_bitsys_systolic_array.sv failed with 2 errors.
+# Compile of uart_rx.sv was successful.
+# Compile of uart_tx.sv was successful.
+# Compile of bitsys_uart_top.sv was successful.
+# Compile of tb_FPGA.sv was successful.
+# 14 compiles, 1 failed with 2 errors.
+# Compile of bitsys_accu_conv.sv was successful.
+# Compile of bitsys_clock_gate.sv was successful.
+# Compile of bitsys_mac.sv was successful.
+# Compile of bitsys_mul.sv was successful.
+# Compile of bitsys_pe_t1.sv was successful.
+# Compile of bitsys_pe_t2.sv was successful.
+# Compile of bitsys_pkg.sv was successful.
+# Compile of bitsys_systolic_array.sv was successful with warnings.
+# Compile of tb_bitsys_mul.sv was successful.
+# Compile of tb_bitsys_systolic_array.sv failed with 2 errors.
+# Compile of uart_rx.sv was successful.
+# Compile of uart_tx.sv was successful.
+# Compile of bitsys_uart_top.sv was successful.
+# Compile of tb_FPGA.sv was successful.
+# 14 compiles, 1 failed with 2 errors.
+# Compile of bitsys_accu_conv.sv was successful.
+# Compile of bitsys_clock_gate.sv was successful.
+# Compile of bitsys_mac.sv was successful.
+# Compile of bitsys_mul.sv was successful.
+# Compile of bitsys_pe_t1.sv was successful.
+# Compile of bitsys_pe_t2.sv was successful.
+# Compile of bitsys_pkg.sv was successful.
+# Compile of bitsys_systolic_array.sv was successful with warnings.
+# Compile of tb_bitsys_mul.sv was successful.
 # Compile of tb_bitsys_systolic_array.sv was successful.
 # Compile of uart_rx.sv was successful.
 # Compile of uart_tx.sv was successful.
@@ -30,13 +60,95 @@
 # 14 compiles, 0 failed with no errors.
 vsim work.tb_bitsys_uart_top
 # vsim work.tb_bitsys_uart_top 
-# Start time: 14:32:13 on Apr 22,2026
+# Start time: 19:12:33 on Apr 24,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
 # Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(51): (vopt-13314) Defaulting port 'a_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(52): (vopt-13314) Defaulting port 'b_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(70): (vopt-13314) Defaulting port 'a_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(71): (vopt-13314) Defaulting port 'b_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.bitsys_pkg(fast)
+# Loading work.tb_bitsys_uart_top(fast)
+run -all
+# 
+# =====================================================
+#   POWER ANALYSIS TB  (CLK=50000000 Hz, BAUD=115200, N=4)
+#   64 back-to-back transactions, no idle gaps.
+#   Magic byte 0xa5 prepended to each packet.
+# =====================================================
+# TIMEOUT: simulation exceeded 89827584 cycles
+# ** Note: $finish    : /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(256)
+#    Time: 1796551680 ns  Iteration: 0  Instance: /tb_bitsys_uart_top
+# 1
+# Break at /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv line 256
+# Compile of bitsys_accu_conv.sv was successful.
+# Compile of bitsys_clock_gate.sv was successful.
+# Compile of bitsys_mac.sv was successful.
+# Compile of bitsys_mul.sv was successful.
+# Compile of bitsys_pe_t1.sv was successful.
+# Compile of bitsys_pe_t2.sv was successful.
+# Compile of bitsys_pkg.sv was successful.
+# Compile of bitsys_systolic_array.sv was successful with warnings.
+# Compile of tb_bitsys_mul.sv was successful.
+# Compile of tb_bitsys_systolic_array.sv was successful.
+# Compile of uart_rx.sv was successful.
+# Compile of uart_tx.sv was successful.
+# Compile of bitsys_uart_top.sv was successful.
+# Compile of tb_FPGA.sv was successful.
+# 14 compiles, 0 failed with no errors.
+restart -f
+# Closing VCD file "tb_bitsys_uart_top.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(70): (vopt-13314) Defaulting port 'a_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(71): (vopt-13314) Defaulting port 'b_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.bitsys_pkg(fast)
+# Loading work.tb_bitsys_uart_top(fast)
+run -all
+# 
+# =====================================================
+#   POWER ANALYSIS TB  (CLK=50000000 Hz, BAUD=115200, N=4)
+#   64 back-to-back transactions, no idle gaps.
+#   Magic byte 0xa5 prepended to each packet.
+# =====================================================
+# output_valid seen at time 2947450000
+# TIMEOUT: simulation exceeded 89827584 cycles
+# ** Note: $finish    : /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(261)
+#    Time: 1796551680 ns  Iteration: 0  Instance: /tb_bitsys_uart_top
+# 1
+# Break at /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv line 261
+# Compile of bitsys_accu_conv.sv was successful.
+# Compile of bitsys_clock_gate.sv was successful.
+# Compile of bitsys_mac.sv was successful.
+# Compile of bitsys_mul.sv was successful.
+# Compile of bitsys_pe_t1.sv was successful.
+# Compile of bitsys_pe_t2.sv was successful.
+# Compile of bitsys_pkg.sv was successful.
+# Compile of bitsys_systolic_array.sv was successful with warnings.
+# Compile of tb_bitsys_mul.sv was successful.
+# Compile of tb_bitsys_systolic_array.sv was successful.
+# Compile of uart_rx.sv was successful.
+# Compile of uart_tx.sv was successful.
+# Compile of bitsys_uart_top.sv was successful.
+# Compile of tb_FPGA.sv was successful.
+# 14 compiles, 0 failed with no errors.
+restart -f
+# Closing VCD file "tb_bitsys_uart_top.vcd"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(70): (vopt-13314) Defaulting port 'a_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(71): (vopt-13314) Defaulting port 'b_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 6, found 4.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'led_tx'.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'led_rx'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
 # Loading sv_std.std
 # Loading work.bitsys_pkg(fast)
 # Loading work.tb_bitsys_uart_top(fast)
@@ -125,9 +237,12 @@ restart -f
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
 # Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(50): (vopt-13314) Defaulting port 'a_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(51): (vopt-13314) Defaulting port 'b_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(70): (vopt-13314) Defaulting port 'a_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv(71): (vopt-13314) Defaulting port 'b_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 6, found 4.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'led_tx'.
+# ** Warning: /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'led_rx'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
 # Loading sv_std.std
 # Loading work.bitsys_pkg(fast)
 # Loading work.tb_bitsys_uart_top(fast)
@@ -192,6 +307,6 @@ run -all
 # ========= All UART tests complete =========
 # 
 # ** Note: $finish    : /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv(277)
-#    Time: 31615500 ns  Iteration: 1  Instance: /tb_bitsys_uart_top
+#    Time: 31619500 ns  Iteration: 1  Instance: /tb_bitsys_uart_top
 # 1
 # Break at /filespace/v/vsathishkuma/ECE751/Final/multiPrecisionSystolicArray/tb/tb_FPGA.sv line 277

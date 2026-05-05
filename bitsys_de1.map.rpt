@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bitsys_de1
-Wed Apr 22 17:14:06 2026
+Fri Apr 24 20:17:03 2026
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -32,16 +32,15 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
  24. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac"
  25. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data"
  26. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu"
- 27. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_out"
- 28. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt"
- 29. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_clear"
- 30. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_skew"
- 31. Port Connectivity Checks: "uart_tx:u_tx"
- 32. Port Connectivity Checks: "uart_rx:u_rx"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
- 36. Analysis & Synthesis Suppressed Messages
+ 27. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt"
+ 28. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_clear"
+ 29. Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_skew"
+ 30. Port Connectivity Checks: "uart_tx:u_tx"
+ 31. Port Connectivity Checks: "uart_rx:u_rx"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -68,13 +67,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 22 17:14:05 2026           ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 24 20:17:01 2026           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; bitsys_de1                                      ;
 ; Top-level Entity Name           ; bitsys_uart_top                                 ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 2365                                            ;
+; Total registers                 ; 2370                                            ;
 ; Total pins                      ; 6                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -184,14 +183,14 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.14        ;
+; Average used               ; 1.26        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.9%      ;
-;     Processor 3            ;   3.6%      ;
-;     Processor 4            ;   3.6%      ;
+;     Processor 2            ;  14.3%      ;
+;     Processor 3            ;   9.0%      ;
+;     Processor 4            ;   3.0%      ;
 +----------------------------+-------------+
 
 
@@ -217,16 +216,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                    ;
 +---------------------------------------------+------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 11442                                                                                    ;
+; Estimate of Logic utilization (ALMs needed) ; 11473                                                                                    ;
 ;                                             ;                                                                                          ;
-; Combinational ALUT usage for logic          ; 20475                                                                                    ;
-;     -- 7 input functions                    ; 160                                                                                      ;
-;     -- 6 input functions                    ; 2065                                                                                     ;
-;     -- 5 input functions                    ; 4551                                                                                     ;
-;     -- 4 input functions                    ; 7199                                                                                     ;
-;     -- <=3 input functions                  ; 6500                                                                                     ;
+; Combinational ALUT usage for logic          ; 20473                                                                                    ;
+;     -- 7 input functions                    ; 162                                                                                      ;
+;     -- 6 input functions                    ; 2126                                                                                     ;
+;     -- 5 input functions                    ; 4560                                                                                     ;
+;     -- 4 input functions                    ; 7136                                                                                     ;
+;     -- <=3 input functions                  ; 6489                                                                                     ;
 ;                                             ;                                                                                          ;
-; Dedicated logic registers                   ; 2365                                                                                     ;
+; Dedicated logic registers                   ; 2370                                                                                     ;
 ;                                             ;                                                                                          ;
 ; I/O pins                                    ; 6                                                                                        ;
 ;                                             ;                                                                                          ;
@@ -234,7 +233,7 @@ on the Quartus Prime software download page.
 ;                                             ;                                                                                          ;
 ; Maximum fan-out node                        ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_mul:u_mul|Add110~0 ;
 ; Maximum fan-out                             ; 6824                                                                                     ;
-; Total fan-out                               ; 98207                                                                                    ;
+; Total fan-out                               ; 98365                                                                                    ;
 ; Average fan-out                             ; 4.30                                                                                     ;
 +---------------------------------------------+------------------------------------------------------------------------------------------+
 
@@ -244,45 +243,44 @@ on the Quartus Prime software download page.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name           ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |bitsys_uart_top                             ; 20475 (402)         ; 2365 (905)                ; 0                 ; 0          ; 6    ; 0            ; |bitsys_uart_top                                                                                                  ; bitsys_uart_top       ; work         ;
-;    |bitsys_systolic_array:u_dut|             ; 19835 (12)          ; 1392 (688)                ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut                                                                      ; bitsys_systolic_array ; work         ;
+; |bitsys_uart_top                             ; 20473 (408)         ; 2370 (910)                ; 0                 ; 0          ; 6    ; 0            ; |bitsys_uart_top                                                                                                  ; bitsys_uart_top       ; work         ;
+;    |bitsys_systolic_array:u_dut|             ; 19827 (11)          ; 1392 (688)                ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut                                                                      ; bitsys_systolic_array ; work         ;
 ;       |bitsys_clock_gate:u_clk_gate_clear|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_clear                                   ; bitsys_clock_gate     ; work         ;
 ;       |bitsys_clock_gate:u_clk_gate_cnt|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt                                     ; bitsys_clock_gate     ; work         ;
-;       |bitsys_clock_gate:u_clk_gate_out|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_out                                     ; bitsys_clock_gate     ; work         ;
 ;       |bitsys_clock_gate:u_clk_gate_skew|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_skew                                    ; bitsys_clock_gate     ; work         ;
 ;       |bitsys_mac:row_g[0].col_g[0].u_mac|   ; 1240 (33)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1122 (1122)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[0].col_g[1].u_mac|   ; 1239 (33)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[0].col_g[1].u_mac|   ; 1238 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1122 (1122)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[0].col_g[2].u_mac|   ; 1239 (33)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[0].col_g[2].u_mac|   ; 1238 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1122 (1122)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[0].col_g[3].u_mac|   ; 1239 (33)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[0].col_g[3].u_mac|   ; 1238 (32)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1122 (1122)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[1].col_g[0].u_mac|   ; 1240 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[1].col_g[0].u_mac|   ; 1239 (33)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
-;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
-;          |bitsys_clock_gate:u_clk_gate_data| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
+;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
+;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1123 (1123)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[1].col_g[1].u_mac|   ; 1238 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[1].col_g[1].u_mac|   ; 1237 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
-;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
+;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1122 (1122)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[1].col_g[2].u_mac|   ; 1239 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[1].col_g[2].u_mac|   ; 1238 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
-;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
+;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1123 (1123)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
 ;       |bitsys_mac:row_g[1].col_g[3].u_mac|   ; 1237 (32)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac                                   ; bitsys_mac            ; work         ;
@@ -290,16 +288,16 @@ on the Quartus Prime software download page.
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1121 (1121)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[2].col_g[0].u_mac|   ; 1242 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[2].col_g[0].u_mac|   ; 1245 (33)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
-;          |bitsys_mul:u_mul|                  ; 1127 (1127)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[2].col_g[1].u_mac|   ; 1238 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
+;          |bitsys_mul:u_mul|                  ; 1129 (1129)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
+;       |bitsys_mac:row_g[2].col_g[1].u_mac|   ; 1236 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
-;          |bitsys_mul:u_mul|                  ; 1123 (1123)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
+;          |bitsys_mul:u_mul|                  ; 1121 (1121)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
 ;       |bitsys_mac:row_g[2].col_g[2].u_mac|   ; 1236 (32)           ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
@@ -310,10 +308,10 @@ on the Quartus Prime software download page.
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1121 (1121)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;       |bitsys_mac:row_g[3].col_g[0].u_mac|   ; 1237 (32)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
+;       |bitsys_mac:row_g[3].col_g[0].u_mac|   ; 1237 (33)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
-;          |bitsys_clock_gate:u_clk_gate_data| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
+;          |bitsys_clock_gate:u_clk_gate_data| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1121 (1121)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
 ;       |bitsys_mac:row_g[3].col_g[1].u_mac|   ; 1236 (32)           ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[1].u_mac                                   ; bitsys_mac            ; work         ;
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[1].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
@@ -329,26 +327,27 @@ on the Quartus Prime software download page.
 ;          |bitsys_accu_conv:u_conv|           ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[3].u_mac|bitsys_accu_conv:u_conv           ; bitsys_accu_conv      ; work         ;
 ;          |bitsys_clock_gate:u_clk_gate_accu| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu ; bitsys_clock_gate     ; work         ;
 ;          |bitsys_mul:u_mul|                  ; 1125 (1125)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[3].u_mac|bitsys_mul:u_mul                  ; bitsys_mul            ; work         ;
-;    |uart_rx:u_rx|                            ; 40 (40)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|uart_rx:u_rx                                                                                     ; uart_rx               ; work         ;
-;    |uart_tx:u_tx|                            ; 198 (198)           ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|uart_tx:u_tx                                                                                     ; uart_tx               ; work         ;
+;    |uart_rx:u_rx|                            ; 39 (39)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|uart_rx:u_rx                                                                                     ; uart_rx               ; work         ;
+;    |uart_tx:u_tx|                            ; 199 (199)           ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |bitsys_uart_top|uart_tx:u_tx                                                                                     ; uart_tx               ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |bitsys_uart_top|state                                                                                                   ;
-+--------------------+-----------------+-----------------+-----------------+--------------------+--------------+------------+--------------+
-; Name               ; state.S_TX_WAIT ; state.S_TX_SEND ; state.S_TX_LOAD ; state.S_WAIT_VALID ; state.S_FEED ; state.S_RX ; state.S_IDLE ;
-+--------------------+-----------------+-----------------+-----------------+--------------------+--------------+------------+--------------+
-; state.S_IDLE       ; 0               ; 0               ; 0               ; 0                  ; 0            ; 0          ; 0            ;
-; state.S_RX         ; 0               ; 0               ; 0               ; 0                  ; 0            ; 1          ; 1            ;
-; state.S_FEED       ; 0               ; 0               ; 0               ; 0                  ; 1            ; 0          ; 1            ;
-; state.S_WAIT_VALID ; 0               ; 0               ; 0               ; 1                  ; 0            ; 0          ; 1            ;
-; state.S_TX_LOAD    ; 0               ; 0               ; 1               ; 0                  ; 0            ; 0          ; 1            ;
-; state.S_TX_SEND    ; 0               ; 1               ; 0               ; 0                  ; 0            ; 0          ; 1            ;
-; state.S_TX_WAIT    ; 1               ; 0               ; 0               ; 0                  ; 0            ; 0          ; 1            ;
-+--------------------+-----------------+-----------------+-----------------+--------------------+--------------+------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |bitsys_uart_top|state                                                                                                                    ;
++--------------------+-----------------+-----------------+-----------------+--------------------+--------------+----------------+------------+--------------+
+; Name               ; state.S_TX_WAIT ; state.S_TX_SEND ; state.S_TX_LOAD ; state.S_WAIT_VALID ; state.S_FEED ; state.S_SETTLE ; state.S_RX ; state.S_IDLE ;
++--------------------+-----------------+-----------------+-----------------+--------------------+--------------+----------------+------------+--------------+
+; state.S_IDLE       ; 0               ; 0               ; 0               ; 0                  ; 0            ; 0              ; 0          ; 0            ;
+; state.S_RX         ; 0               ; 0               ; 0               ; 0                  ; 0            ; 0              ; 1          ; 1            ;
+; state.S_SETTLE     ; 0               ; 0               ; 0               ; 0                  ; 0            ; 1              ; 0          ; 1            ;
+; state.S_FEED       ; 0               ; 0               ; 0               ; 0                  ; 1            ; 0              ; 0          ; 1            ;
+; state.S_WAIT_VALID ; 0               ; 0               ; 0               ; 1                  ; 0            ; 0              ; 0          ; 1            ;
+; state.S_TX_LOAD    ; 0               ; 0               ; 1               ; 0                  ; 0            ; 0              ; 0          ; 1            ;
+; state.S_TX_SEND    ; 0               ; 1               ; 0               ; 0                  ; 0            ; 0              ; 0          ; 1            ;
+; state.S_TX_WAIT    ; 1               ; 0               ; 0               ; 0                  ; 0            ; 0              ; 0          ; 1            ;
++--------------------+-----------------+-----------------+-----------------+--------------------+--------------+----------------+------------+--------------+
 
 
 Encoding Type:  One-Hot
@@ -382,7 +381,7 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                                                                                 ; Latch Enable Signal ; Free of Timing Hazards ;
 +------------------------------------------------------------------------------------------------------------+---------------------+------------------------+
-; bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_out|latch_out                                     ; clk                 ; yes                    ;
+; bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt|latch_out                                     ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out ; clk                 ; yes                    ;
@@ -399,7 +398,6 @@ Encoding Type:  One-Hot
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out ; clk                 ; yes                    ;
-; bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt|latch_out                                     ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_clear|latch_out                                   ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_skew|latch_out                                    ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out ; clk                 ; yes                    ;
@@ -417,28 +415,29 @@ Encoding Type:  One-Hot
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out ; clk                 ; yes                    ;
 ; bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out ; clk                 ; yes                    ;
-; Number of user-specified and inferred latches = 35                                                         ;                     ;                        ;
+; Number of user-specified and inferred latches = 34                                                         ;                     ;                        ;
 +------------------------------------------------------------------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; state~10                               ; Lost fanout        ;
-; state~11                               ; Lost fanout        ;
-; state~12                               ; Lost fanout        ;
-; state~13                               ; Lost fanout        ;
-; uart_tx:u_tx|state~4                   ; Lost fanout        ;
-; uart_tx:u_tx|state~5                   ; Lost fanout        ;
-; uart_tx:u_tx|state~6                   ; Lost fanout        ;
-; uart_rx:u_rx|state~4                   ; Lost fanout        ;
-; uart_rx:u_rx|state~5                   ; Lost fanout        ;
-; uart_rx:u_rx|state~6                   ; Lost fanout        ;
-; Total Number of Removed Registers = 10 ;                    ;
-+----------------------------------------+--------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; state~11                                 ; Lost fanout                            ;
+; state~12                                 ; Lost fanout                            ;
+; state~13                                 ; Lost fanout                            ;
+; state~14                                 ; Lost fanout                            ;
+; uart_tx:u_tx|state~4                     ; Lost fanout                            ;
+; uart_tx:u_tx|state~5                     ; Lost fanout                            ;
+; uart_tx:u_tx|state~6                     ; Lost fanout                            ;
+; uart_rx:u_rx|state~4                     ; Lost fanout                            ;
+; uart_rx:u_rx|state~5                     ; Lost fanout                            ;
+; uart_rx:u_rx|state~6                     ; Lost fanout                            ;
+; bitsys_systolic_array:u_dut|cycle_cnt[4] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11   ;                                        ;
++------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -446,10 +445,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2365  ;
-; Number of registers using Synchronous Clear  ; 42    ;
-; Number of registers using Synchronous Load   ; 520   ;
-; Number of registers using Asynchronous Clear ; 1853  ;
+; Total registers                              ; 2370  ;
+; Number of registers using Synchronous Clear  ; 43    ;
+; Number of registers using Synchronous Load   ; 521   ;
+; Number of registers using Asynchronous Clear ; 1858  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1865  ;
 ; Number of registers using Preset             ; 0     ;
@@ -462,7 +461,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; uart_tx:u_tx|tx                        ; 1       ;
-; uart_rx:u_rx|rx_d2                     ; 3       ;
+; uart_rx:u_rx|rx_d2                     ; 4       ;
 ; uart_rx:u_rx|rx_d1                     ; 1       ;
 ; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
@@ -482,24 +481,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|result[2]                     ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_mul:u_mul|Add110       ;
 ; 4:1                ; 272 bits  ; 544 LEs       ; 544 LEs              ; 0 LEs                  ; No         ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_accu_conv:u_conv|Mux14 ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[3].u_mac|bitsys_accu_conv:u_conv|Mux0  ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[1].u_mac|bitsys_accu_conv:u_conv|Mux0  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |bitsys_uart_top|bitsys_systolic_array:u_dut|cycle_cnt[4]                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |bitsys_uart_top|rx_stretch_cnt[7]                                                                            ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |bitsys_uart_top|rx_stretch_cnt[10]                                                                           ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |bitsys_uart_top|tx_stretch_cnt[0]                                                                            ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |bitsys_uart_top|tx_stretch_cnt[20]                                                                           ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |bitsys_uart_top|uart_rx:u_rx|sample_count[1]                                                                 ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |bitsys_uart_top|rx_stretch_cnt[8]                                                                            ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |bitsys_uart_top|rx_stretch_cnt[16]                                                                           ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |bitsys_uart_top|tx_stretch_cnt[14]                                                                           ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |bitsys_uart_top|tx_stretch_cnt[19]                                                                           ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |bitsys_uart_top|uart_rx:u_rx|sample_count[0]                                                                 ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |bitsys_uart_top|uart_rx:u_rx|bit_count[3]                                                                    ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |bitsys_uart_top|feed_k[1]                                                                                    ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |bitsys_uart_top|feed_k[0]                                                                                    ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |bitsys_uart_top|uart_tx:u_tx|bit_count[0]                                                                    ;
-; 68:1               ; 7 bits    ; 315 LEs       ; 301 LEs              ; 14 LEs                 ; Yes        ; |bitsys_uart_top|uart_tx:u_tx|shift_reg[6]                                                                    ;
+; 68:1               ; 7 bits    ; 315 LEs       ; 301 LEs              ; 14 LEs                 ; Yes        ; |bitsys_uart_top|uart_tx:u_tx|shift_reg[2]                                                                    ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |bitsys_uart_top|rx_cnt                                                                                       ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |bitsys_uart_top|uart_tx:u_tx|Selector30                                                                      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |bitsys_uart_top|uart_tx:u_tx|Selector32                                                                      ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |bitsys_uart_top|uart_rx:u_rx|Selector23                                                                      ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |bitsys_uart_top|uart_tx:u_tx|Selector29                                                                      ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 25 LEs               ; 15 LEs                 ; No         ; |bitsys_uart_top|Selector86                                                                                   ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |bitsys_uart_top|Selector85                                                                                   ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |bitsys_uart_top|uart_tx:u_tx|Selector31                                                                      ;
+; 15:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |bitsys_uart_top|Selector91                                                                                   ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; No         ; |bitsys_uart_top|Selector90                                                                                   ;
 ; 7:1                ; 64 bits   ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; No         ; |bitsys_uart_top|feed_a_in                                                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[3].u_mac|bitsys_accu_conv:u_conv|Mux0  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
 
 
@@ -608,15 +608,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_out" ;
-+-------------+-------+----------+---------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                                 ;
-+-------------+-------+----------+---------------------------------------------------------+
-; test_enable ; Input ; Info     ; Stuck at GND                                            ;
-+-------------+-------+----------+---------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt" ;
 +-------------+-------+----------+---------------------------------------------------------+
 ; Port        ; Type  ; Severity ; Details                                                 ;
@@ -678,30 +669,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2365                        ;
-;     CLR               ; 482                         ;
-;     CLR SCLR          ; 17                          ;
-;     CLR SLD           ; 1                           ;
+; arriav_ff             ; 2370                        ;
+;     CLR               ; 485                         ;
+;     CLR SCLR          ; 18                          ;
+;     CLR SLD           ; 2                           ;
 ;     ENA               ; 512                         ;
 ;     ENA CLR           ; 809                         ;
 ;     ENA CLR SCLR      ; 25                          ;
 ;     ENA CLR SLD       ; 519                         ;
-; arriav_lcell_comb     ; 20478                       ;
+; arriav_lcell_comb     ; 20476                       ;
 ;     arith             ; 7539                        ;
 ;         1 data inputs ; 259                         ;
 ;         2 data inputs ; 995                         ;
 ;         3 data inputs ; 160                         ;
 ;         4 data inputs ; 2739                        ;
 ;         5 data inputs ; 3386                        ;
-;     extend            ; 160                         ;
-;         7 data inputs ; 160                         ;
-;     normal            ; 12395                       ;
+;     extend            ; 162                         ;
+;         7 data inputs ; 162                         ;
+;     normal            ; 12391                       ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 1475                        ;
-;         3 data inputs ; 3224                        ;
-;         4 data inputs ; 4460                        ;
-;         5 data inputs ; 1165                        ;
-;         6 data inputs ; 2065                        ;
+;         3 data inputs ; 3213                        ;
+;         4 data inputs ; 4397                        ;
+;         5 data inputs ; 1174                        ;
+;         6 data inputs ; 2126                        ;
 ;     shared            ; 384                         ;
 ;         3 data inputs ; 384                         ;
 ; boundary_port         ; 6                           ;
@@ -716,7 +707,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:28     ;
+; Top            ; 00:02:07     ;
 +----------------+--------------+
 
 
@@ -726,7 +717,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Wed Apr 22 17:12:21 2026
+    Info: Processing started: Fri Apr 24 20:14:34 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bitsys_de1 -c bitsys_de1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 0 entities, in source file rtl/bitsys_pkg.sv
@@ -744,34 +735,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file rtl/bit
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/bitsys_clock_gate.sv
     Info (12023): Found entity 1: bitsys_clock_gate File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/bitsys_systolic_array.sv
-    Info (12023): Found entity 1: bitsys_systolic_array File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 39
+    Info (12023): Found entity 1: bitsys_systolic_array File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 59
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/uart_rx.sv
     Info (12023): Found entity 1: uart_rx File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/uart_tx.sv
     Info (12023): Found entity 1: uart_tx File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/bitsys_uart_top.sv
-    Info (12023): Found entity 1: bitsys_uart_top File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 28
+    Info (12023): Found entity 1: bitsys_uart_top File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 37
 Info (12127): Elaborating entity "bitsys_uart_top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(46): truncated value with size 32 to match size of target (16) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 46
-Warning (10036): Verilog HDL or VHDL warning at bitsys_uart_top.sv(124): object "tx_active" assigned a value but never read File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 124
-Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(256): truncated value with size 32 to match size of target (6) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 256
-Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(293): truncated value with size 32 to match size of target (3) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 293
-Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(354): truncated value with size 32 to match size of target (7) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 354
-Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(385): truncated value with size 32 to match size of target (22) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 385
-Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(395): truncated value with size 32 to match size of target (22) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 395
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(55): truncated value with size 32 to match size of target (16) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 55
+Warning (10036): Verilog HDL or VHDL warning at bitsys_uart_top.sv(135): object "tx_active" assigned a value but never read File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 135
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(277): truncated value with size 32 to match size of target (6) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 277
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(294): truncated value with size 32 to match size of target (4) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 294
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(330): truncated value with size 32 to match size of target (3) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 330
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(391): truncated value with size 32 to match size of target (7) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 391
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(420): truncated value with size 32 to match size of target (22) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 420
+Warning (10230): Verilog HDL assignment warning at bitsys_uart_top.sv(430): truncated value with size 32 to match size of target (22) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 430
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "dut_c_out" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mat_a" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mat_b" into its bus
-Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:u_rx" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 63
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:u_rx" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 72
 Warning (10230): Verilog HDL assignment warning at uart_rx.sv(62): truncated value with size 32 to match size of target (16) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv Line: 62
 Warning (10230): Verilog HDL assignment warning at uart_rx.sv(71): truncated value with size 32 to match size of target (16) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv Line: 71
 Warning (10230): Verilog HDL assignment warning at uart_rx.sv(76): truncated value with size 32 to match size of target (4) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv Line: 76
 Warning (10230): Verilog HDL assignment warning at uart_rx.sv(81): truncated value with size 32 to match size of target (16) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_rx.sv Line: 81
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:u_tx" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 80
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:u_tx" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 89
 Warning (10230): Verilog HDL assignment warning at uart_tx.sv(41): truncated value with size 32 to match size of target (16) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv Line: 41
 Warning (10230): Verilog HDL assignment warning at uart_tx.sv(66): truncated value with size 32 to match size of target (4) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/uart_tx.sv Line: 66
-Info (12128): Elaborating entity "bitsys_systolic_array" for hierarchy "bitsys_systolic_array:u_dut" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 105
-Warning (10230): Verilog HDL assignment warning at bitsys_systolic_array.sv(231): truncated value with size 32 to match size of target (5) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 231
+Info (12128): Elaborating entity "bitsys_systolic_array" for hierarchy "bitsys_systolic_array:u_dut" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_uart_top.sv Line: 114
+Warning (10036): Verilog HDL or VHDL warning at bitsys_systolic_array.sv(88): object "out_en" assigned a value but never read File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 88
+Warning (10230): Verilog HDL assignment warning at bitsys_systolic_array.sv(265): truncated value with size 32 to match size of target (5) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 265
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "c_out" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "a_skew" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "b_skew" into its bus
@@ -779,47 +772,50 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "b_v" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pe_result" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "c_out" into its bus
-Info (12128): Elaborating entity "bitsys_clock_gate" for hierarchy "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_skew" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 169
+Info (12128): Elaborating entity "bitsys_clock_gate" for hierarchy "bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_skew" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 190
 Info (10041): Inferred latch for "latch_out" at bitsys_clock_gate.sv(26) File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 26
-Info (12128): Elaborating entity "bitsys_mac" for hierarchy "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 220
+Info (12128): Elaborating entity "bitsys_mac" for hierarchy "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_systolic_array.sv Line: 251
 Info (12128): Elaborating entity "bitsys_mul" for hierarchy "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_mul:u_mul" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_mac.sv Line: 52
 Info (12128): Elaborating entity "bitsys_accu_conv" for hierarchy "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_accu_conv:u_conv" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_mac.sv Line: 59
 Info (286030): Timing-Driven Synthesis is running
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
     Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
     Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
     Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_accu|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
-    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[3].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[2].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[1].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[3].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[2].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
+    Info (13026): Duplicate LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[1].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" merged with LATCH primitive "bitsys_systolic_array:u_dut|bitsys_mac:row_g[0].col_g[0].u_mac|bitsys_clock_gate:u_clk_gate_data|latch_out" File: I:/ECE751/Final/multiPrecisionSystolicArray/rtl/bitsys_clock_gate.sv Line: 22
 Info (17049): 10 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file I:/ECE751/Final/multiPrecisionSystolicArray/bitsys_de1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22137 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 22134 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 22131 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 5196 megabytes
-    Info: Processing ended: Wed Apr 22 17:14:06 2026
-    Info: Elapsed time: 00:01:45
-    Info: Total CPU time (on all processors): 00:01:47
+    Info (21061): Implemented 22128 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 5193 megabytes
+    Info: Processing ended: Fri Apr 24 20:17:06 2026
+    Info: Elapsed time: 00:02:32
+    Info: Total CPU time (on all processors): 00:02:24
 
 
 +------------------------------------------+

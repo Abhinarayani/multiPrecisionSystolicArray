@@ -275,10 +275,10 @@ def run_all_tests(ser: serial.Serial) -> int:
         [-13,  14, -15,  16],
     ]
     B3 = [
-        [  2,  -1,   3,  -2],
-        [ -4,   5,  -6,   7],
-        [  8,  -9,  10, -11],
-        [-12,  13, -14,  15],
+        [ 2,  -1,   3,  -2],
+        [-4,   5,  -5,   6],
+        [ 6,  -5,  4, -1],
+        [-2,  3, -5,  6],
     ]
 
     # ── Test 4: Extreme values (−128 / 127 / identity-like B) ─────────────────
@@ -294,6 +294,7 @@ def run_all_tests(ser: serial.Serial) -> int:
         [0, 0, 1, 0],
         [0, 0, 0, 1],
     ]
+
 
     tests = [
         ("Test 1: Identity × B1",     A_I, B1),

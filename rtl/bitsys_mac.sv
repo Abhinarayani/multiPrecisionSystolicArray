@@ -23,13 +23,13 @@ module bitsys_mac
     input  logic               rst_n,
     input  logic               clear,      // load first product (start new dot-product)
     input  logic               en,         // data valid - accumulate
-    input  logic [7:0]         a_in,
-    input  logic [7:0]         b_in,
+    input  logic signed [7:0]         a_in,
+    input  logic signed [7:0]         b_in,
     input  logic [1:0]         prec,
     input  logic               is_signed,
     input  logic               bnn_mode,
-    output logic [7:0]         a_out,      // registered pass-through (systolic)
-    output logic [7:0]         b_out,
+    output logic signed [7:0]         a_out,      // registered pass-through (systolic)
+    output logic signed [7:0]         b_out,
     output logic signed [31:0] result
 );
 

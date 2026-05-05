@@ -1,1 +1,1 @@
-/cae/apps/data/mentor-2024/questasim/linux/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 393216 work.tb_bitsys_uart_top(fast) -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt2 -id 2-000ae431a4f1-69e92369-2d5b8-24f7e2
+/cae/apps/data/mentor-2024/questasim/linux/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 393216 work.tb_bitsys_power -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt2 -id 1-000ae431a4f1-69ead6d7-6e30a-368906

@@ -1,5 +1,5 @@
 Flow report for bitsys_de1
-Wed Apr 22 17:21:39 2026
+Fri Apr 24 20:28:28 2026
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 22 17:20:15 2026           ;
+; Flow Status                     ; Successful - Fri Apr 24 20:26:54 2026           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; bitsys_de1                                      ;
 ; Top-level Entity Name           ; bitsys_uart_top                                 ;
@@ -49,7 +49,7 @@ on the Quartus Prime software download page.
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
 ; Logic utilization (in ALMs)     ; 11,414 / 32,070 ( 36 % )                        ;
-; Total registers                 ; 2616                                            ;
+; Total registers                 ; 2625                                            ;
 ; Total pins                      ; 6 / 457 ( 1 % )                                 ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
@@ -68,28 +68,34 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/22/2026 17:12:22 ;
+; Start date & time ; 04/24/2026 20:14:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; bitsys_de1          ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-----------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589206.177689594229836         ; --            ; --              ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --              ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --              ; --         ;
-; NUM_PARALLEL_PROCESSORS             ; 4                                      ; --            ; --              ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; bitsys_uart_top ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; bitsys_uart_top ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; bitsys_uart_top ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --              ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --              ; --         ;
-; TOP_LEVEL_ENTITY                    ; bitsys_uart_top                        ; bitsys_de1    ; --              ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-----------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                     ;
++-------------------------------------+----------------------------------------+---------------+-----------------+---------------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id          ;
++-------------------------------------+----------------------------------------+---------------+-----------------+---------------------+
+; COMPILER_SIGNATURE_ID               ; 10995770589206.177707967414716         ; --            ; --              ; --                  ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --              ; --                  ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --              ; --                  ;
+; NUM_PARALLEL_PROCESSORS             ; 4                                      ; --            ; --              ; --                  ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; bitsys_uart_top ; Top                 ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; bitsys_uart_top ; Top                 ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; bitsys_uart_top ; Top                 ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --              ; --                  ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 100 %                                  ; 12.5%         ; --              ; --                  ;
+; POWER_INPUT_FILE_NAME               ; tb_bitsys_power.vcd                    ; --            ; bitsys_uart_top ; tb_bitsys_power.vcd ;
+; POWER_INPUT_FILE_TYPE               ; VCD                                    ; --            ; bitsys_uart_top ; tb_bitsys_power.vcd ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --              ; --                  ;
+; POWER_USE_INPUT_FILES               ; On                                     ; Off           ; --              ; --                  ;
+; POWER_VCD_FILE_END_TIME             ; 2600120000 ps                          ; --            ; bitsys_uart_top ; tb_bitsys_power.vcd ;
+; POWER_VCD_FILE_START_TIME           ; 120000 ps                              ; --            ; bitsys_uart_top ; tb_bitsys_power.vcd ;
+; TOP_LEVEL_ENTITY                    ; bitsys_uart_top                        ; bitsys_de1    ; --              ; --                  ;
++-------------------------------------+----------------------------------------+---------------+-----------------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,11 +103,11 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:40     ; 1.1                     ; 5165 MB             ; 00:01:45                           ;
-; Fitter               ; 00:05:27     ; 1.3                     ; 6864 MB             ; 00:11:01                           ;
-; Assembler            ; 00:00:12     ; 1.0                     ; 5377 MB             ; 00:00:11                           ;
-; Timing Analyzer      ; 00:01:22     ; 1.7                     ; 5704 MB             ; 00:01:55                           ;
-; Total                ; 00:08:41     ; --                      ; --                  ; 00:14:52                           ;
+; Analysis & Synthesis ; 00:02:21     ; 1.3                     ; 5173 MB             ; 00:02:20                           ;
+; Fitter               ; 00:08:45     ; 1.3                     ; 6883 MB             ; 00:17:12                           ;
+; Assembler            ; 00:00:25     ; 1.0                     ; 5377 MB             ; 00:00:23                           ;
+; Timing Analyzer      ; 00:01:31     ; 2.1                     ; 5710 MB             ; 00:02:33                           ;
+; Total                ; 00:13:02     ; --                      ; --                  ; 00:22:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

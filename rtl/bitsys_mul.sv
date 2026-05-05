@@ -34,8 +34,8 @@
 module bitsys_mul
     import bitsys_pkg::*;
 (
-    input  logic [7:0]  a,
-    input  logic [7:0]  b,
+    input  logic signed [7:0]  a,
+    input  logic signed [7:0]  b,
     input  logic [1:0]  prec,
     input  logic        is_signed,
     input  logic        bnn_mode,    // XNOR for 1-bit BNN (prec==PREC_1B)

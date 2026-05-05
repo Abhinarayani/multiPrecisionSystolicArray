@@ -2,9 +2,9 @@
 clk => clk.IN2
 rst_n => rst_n.IN2
 uart_rx_pin => uart_rx_pin.IN1
-uart_tx_pin << uart_tx:u_tx.tx
-led_rx << Equal4.DB_MAX_OUTPUT_PORT_TYPE
-led_tx << Equal5.DB_MAX_OUTPUT_PORT_TYPE
+uart_tx_pin <= uart_tx:u_tx.tx
+led_rx <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+led_tx <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |bitsys_uart_top|uart_rx:u_rx
@@ -222,12 +222,12 @@ busy <= busy.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |bitsys_uart_top|bitsys_systolic_array:u_dut
-clk => clk.IN20
+clk => clk.IN19
 rst_n => rst_n.IN16
 start => skew_en.IN0
 start => clear_en.IN0
 start => cnt_en.IN1
-start => out_en.IN1
+start => done_pulse.OUTPUTSELECT
 start => cycle_cnt.OUTPUTSELECT
 start => cycle_cnt.OUTPUTSELECT
 start => cycle_cnt.OUTPUTSELECT
@@ -1347,14 +1347,6 @@ gated_clk <= gated_clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_cnt
-clk => gated_clk.IN1
-clk => latch_out.LATCH_ENABLE
-enable => latch_out.IN0
-test_enable => latch_out.IN1
-gated_clk <= gated_clk.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|bitsys_uart_top|bitsys_systolic_array:u_dut|bitsys_clock_gate:u_clk_gate_out
 clk => gated_clk.IN1
 clk => latch_out.LATCH_ENABLE
 enable => latch_out.IN0

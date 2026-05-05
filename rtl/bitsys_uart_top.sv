@@ -18,6 +18,15 @@
 //   Cycle 4 : start=0, a_in=0, b_in=0                      (drain)
 //   Wait output_valid → capture c_out → transmit 64 bytes
 //
+// ─── Fix (2025) ───────────────────────────────────────────────────────────────
+//   Added S_SETTLE state between S_RX and S_FEED.
+//   On real FPGA hardware, mat_a/mat_b are inferred as registers; the last
+//   write (byte 32 = B[3][3]) lands on the same rising edge that exits S_RX.
+//   Without a settling cycle, S_FEED k=0 reads B[3][j] before those registers
+//   update, silently corrupting the last row of B.  S_SETTLE gives the
+//   registers one extra clock to propagate before S_FEED begins reading them.
+//   Questa simulation is unaffected (reads are delta-cycle-correct anyway).
+//
 // ─── Assumptions ──────────────────────────────────────────────────────────────
 //   CLK_FREQ : system clock frequency (default 50 MHz)
 //   BAUD     : 115200
@@ -36,8 +45,8 @@ module bitsys_uart_top
     input  logic rst_n,
     input  logic uart_rx_pin,
     output logic uart_tx_pin,
-    output logic led_rx,       // ← add
-    output logic led_tx        // ← add
+    output logic led_rx,
+    output logic led_tx
 );
 
     // -------------------------------------------------------------------------
@@ -86,8 +95,8 @@ module bitsys_uart_top
     logic [1:0]      dut_prec;
     logic            dut_is_signed;
     logic            dut_bnn_mode;
-    logic [7:0]      dut_a_in [0:N-1];
-    logic [7:0]      dut_b_in [0:N-1];
+    logic signed [7:0]      dut_a_in [0:N-1];
+    logic signed [7:0]      dut_b_in [0:N-1];
     logic            dut_output_valid;
     logic signed [31:0] dut_c_out [0:N-1][0:N-1];
 
@@ -111,8 +120,8 @@ module bitsys_uart_top
     localparam int RX_TOTAL = 33;
 
     logic [7:0]  cfg_byte;
-    logic [7:0]  mat_a [0:N-1][0:N-1];   // mat_a[row][col]
-    logic [7:0]  mat_b [0:N-1][0:N-1];
+    logic signed [7:0]  mat_a [0:N-1][0:N-1];   // mat_a[row][col]
+    logic signed [7:0]  mat_b [0:N-1][0:N-1];
 
     // -------------------------------------------------------------------------
     // Transmit FIFO  (64 bytes: 16 elements × 4 bytes each)
@@ -127,8 +136,8 @@ module bitsys_uart_top
     // -------------------------------------------------------------------------
     // Feed-sequence registers (mirror of TB's run_matmul variables)
     // -------------------------------------------------------------------------
-    logic [7:0]  feed_a_in [0:N-1];   // registered inputs to DUT
-    logic [7:0]  feed_b_in [0:N-1];
+    logic signed [7:0]  feed_a_in [0:N-1];   // registered inputs to DUT
+    logic signed [7:0]  feed_b_in [0:N-1];
     logic        feed_start;
 
     // -------------------------------------------------------------------------
@@ -137,6 +146,8 @@ module bitsys_uart_top
     typedef enum logic [3:0] {
         S_IDLE,       // waiting for first byte of packet
         S_RX,         // receiving remaining bytes
+        S_SETTLE,     // ← NEW: one-cycle pipeline bubble so mat_a/mat_b
+                      //         registers are stable before S_FEED reads them
         S_FEED,       // feeding matrix data to DUT (k=0..N-1 then drain)
         S_WAIT_VALID, // waiting for output_valid
         S_TX_LOAD,    // load TX FIFO from c_out
@@ -206,7 +217,7 @@ module bitsys_uart_top
                 end
         end else begin
 
-            // Default: clear feed_start each cycle (TB: start is only high 1 cycle)
+            // Default: clear feed_start each cycle (start is only high 1 cycle)
             feed_start <= 1'b0;
 
             case (state)
@@ -215,10 +226,11 @@ module bitsys_uart_top
                 // S_IDLE: wait for the config byte (first byte of a new packet)
                 // ─────────────────────────────────────────────────────────────
                 S_IDLE: begin
-                    rx_cnt   <= '0;
-                    feed_k   <= '0;
-                    tx_ptr   <= '0;
-                    tx_active <= 1'b0;
+                    rx_cnt     <= '0;
+                    feed_k     <= '0;
+                    tx_ptr     <= '0;
+                    tx_active  <= 1'b0;
+                    settle_cnt <= '0;
                     // Zero the DUT feed lines
                     for (int i = 0; i < N; i++) begin
                         feed_a_in[i] <= 8'b0;
@@ -248,13 +260,35 @@ module bitsys_uart_top
                         end
 
                         if (rx_cnt == 6'd32) begin
-                            // All 32 data bytes received; start feeding DUT
+                            // All 32 data bytes received.
+                            // ── FIX: go to S_SETTLE instead of S_FEED directly ──
+                            // The write to mat_b[3][3] (and mat_a[3][3]) happens
+                            // on THIS rising edge.  On FPGA the updated value is
+                            // only visible at the NEXT rising edge.  S_SETTLE
+                            // provides that one-cycle bubble so S_FEED k=0 sees
+                            // fully-updated mat_a and mat_b arrays.
                             rx_cnt <= '0;
                             feed_k <= '0;
-                            state  <= S_FEED;
+                            state  <= S_SETTLE;   // ← was S_FEED
                         end else begin
                             rx_cnt <= rx_cnt + 1;
                         end
+                    end
+                end
+
+                // ─────────────────────────────────────────────────────────────
+                // S_SETTLE: Multiple idle cycles for hardware settling.
+                //   On FPGA, registered arrays may require more than one cycle
+                //   to become reliably readable after a write.  SETTLE_CYCLES
+                //   provides this delay to ensure mat_a/mat_b are stable before
+                //   S_FEED begins reading them.
+                // ─────────────────────────────────────────────────────────────
+                S_SETTLE: begin
+                    if (settle_cnt == 4'(SETTLE_CYCLES) - 1) begin
+                        settle_cnt <= '0;
+                        state      <= S_FEED;
+                    end else begin
+                        settle_cnt <= settle_cnt + 1;
                     end
                 end
 
@@ -364,38 +398,36 @@ module bitsys_uart_top
     end
 
     // -------------------------------------------------------------------------
-// RX / TX activity LEDs
-// Each LED is stretched to ~80 ms so a single UART byte is always visible.
-// rx_busy and tx_busy are already internal wires from the uart_rx / uart_tx
-// instances — no new signals needed.
-// -------------------------------------------------------------------------
-localparam int STRETCH_CYCLES = CLK_FREQ / 12;  // ~83 ms at any clock freq
-localparam int STRETCH_W      = $clog2(STRETCH_CYCLES + 1);
+    // RX / TX activity LEDs
+    // Each LED is stretched to ~80 ms so a single UART byte is always visible.
+    // -------------------------------------------------------------------------
+    localparam int STRETCH_CYCLES = CLK_FREQ / 12;  // ~83 ms at any clock freq
+    localparam int STRETCH_W      = $clog2(STRETCH_CYCLES + 1);
 
-logic [STRETCH_W-1:0] rx_stretch_cnt;
-logic [STRETCH_W-1:0] tx_stretch_cnt;
+    logic [STRETCH_W-1:0] rx_stretch_cnt;
+    logic [STRETCH_W-1:0] tx_stretch_cnt;
 
-// RX LED — reload counter whenever the UART RX is busy
-always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n)
-        rx_stretch_cnt <= '0;
-    else if (rx_busy)
-        rx_stretch_cnt <= STRETCH_W'(STRETCH_CYCLES);
-    else if (rx_stretch_cnt != '0)
-        rx_stretch_cnt <= rx_stretch_cnt - 1;
-end
+    // RX LED — reload counter whenever the UART RX is busy
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            rx_stretch_cnt <= '0;
+        else if (rx_busy)
+            rx_stretch_cnt <= STRETCH_W'(STRETCH_CYCLES);
+        else if (rx_stretch_cnt != '0)
+            rx_stretch_cnt <= rx_stretch_cnt - 1;
+    end
 
-// TX LED — reload counter whenever the UART TX is busy
-always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n)
-        tx_stretch_cnt <= '0;
-    else if (tx_busy)
-        tx_stretch_cnt <= STRETCH_W'(STRETCH_CYCLES);
-    else if (tx_stretch_cnt != '0)
-        tx_stretch_cnt <= tx_stretch_cnt - 1;
-end
+    // TX LED — reload counter whenever the UART TX is busy
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            tx_stretch_cnt <= '0;
+        else if (tx_busy)
+            tx_stretch_cnt <= STRETCH_W'(STRETCH_CYCLES);
+        else if (tx_stretch_cnt != '0)
+            tx_stretch_cnt <= tx_stretch_cnt - 1;
+    end
 
-assign led_rx = (rx_stretch_cnt != '0);
-assign led_tx = (tx_stretch_cnt != '0);
+    assign led_rx = (rx_stretch_cnt != '0);
+    assign led_tx = (tx_stretch_cnt != '0);
 
 endmodule
